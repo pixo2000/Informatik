@@ -1,5 +1,6 @@
 import time
 import keyboard
+# noch gui einbauen
 
 # um den code immer abbrechen zu können
 while not keyboard.is_pressed('p'):
