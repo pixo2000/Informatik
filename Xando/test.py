@@ -1,12 +1,5 @@
-benutzereingabe = input("Bitte Namen eingeben: ")
+x = 1
 
-# man kann auch nach typen filtern aber das zu aufwändig
-if (type(benutzereingabe) == str):
-     if (benutzereingabe == "exit"):
-           print("Exiting cuz u typed exit")
-           quit()
-     else:
-           print("Hallo: " + benutzereingabe)
-           quit()
-else:
-     print("Error. No String")
+while x < 5:
+      print(x)
+      x = x + 1
