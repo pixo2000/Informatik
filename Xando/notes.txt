@@ -1,3 +1,0 @@
-notes für schaltjahr berrechnung:
-while loop immer jahr -4 und counter +1
-wenn jahr <4 halt fertig aber die 100er schaltjahre
