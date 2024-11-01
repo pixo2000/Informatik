@@ -1,4 +1,6 @@
 # Python-Informatik 
-einfach informatik python kram aus der 10. klasse an der MNS aber halt net 100% aufgaben weil ich viel selbst mache net wie es soll(besser)
+einfach informatik python kram aus der 10. klasse an der MNS aber besser und auch mit eigenen sachen / extraaufgaben
 
-aktuell nur ich aber maybe später auch noch von anderen
+Aktuelle Ordner:
+Xando - Paul
+casheN - Cassian
