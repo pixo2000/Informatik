@@ -1,20 +1,18 @@
 import math
 
-x = int(input("How many stars? "))
+stars = int(input("How many stars? "))
+result = ""
+i = 0
+while i < (2 * stars) + 1:
+        j = 0
+        line = ""
+        while j < (2 * stars) + 1:
+            if math.sqrt((i - stars) ** 2 + (j - stars) ** 2) <= stars:
+                line += "*"
+            else:
+                line += " "
+            j += 1
+        result += line + "\n"
+        i += 1
 
-i = 1
-while i <= x:
-      print(" " * (x - i) + "*" * (2 * i - 1))
-            i += 1
-      
-      i = -x
-      while i <= x:
-            j = -x
-            while j <= x:
-                  if math.sqrt(i**2 + j**2) <= x:
-                        print("*", end="")
-                  else:
-                        print(" ", end="")
-                  j += 1
-            print()
-            i += 1
+print(result)
