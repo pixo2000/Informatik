@@ -56,7 +56,7 @@ def aufgabe3(stars):
 def show_output():
     try:
         stars = int(entry_stars.get())
-        if starnumber == 0:
+        if stars == 0:
             messagebox.showerror("Fehler", "Bitte gib eine Zahl über 1 ein, um einen Output zu bekommen")
 
         task = int(entry_task.get())
