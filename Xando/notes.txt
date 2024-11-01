@@ -1,7 +1,7 @@
 ENDLICH PYCHARM!
 
-- dev setigs new window
+- so gefällt es mir ohne dev tools und horizontal
+- dev setigs new window / dev settings neben/unter normale settings
 - open dev tools with F12 and not a checkbox
 - make checkbox nicer
-
-- check what happens when 0 is enterd
+- make error nicer

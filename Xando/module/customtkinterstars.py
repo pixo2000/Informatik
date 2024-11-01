@@ -79,11 +79,9 @@ def show_output(*args):
 
 def toggle_dev_tools():
     if dev_tools_var.get() == 1:
-        button_show.pack(side="left", padx=5)
-        console_settings_frame.pack(pady=10)
+        dev_tools_frame.pack(side="left", padx=10)
     else:
-        button_show.pack_forget()
-        console_settings_frame.pack_forget()
+        dev_tools_frame.pack_forget()
 
 def apply_console_settings():
     try:
@@ -120,6 +118,8 @@ def update_button_layout():
         entry_stars.pack(pady=5)
         label_task.pack(pady=5)
         option_task.pack(pady=5)
+        if dev_tools_var.get() == 1:
+            dev_tools_frame.pack(side="left", padx=10)
 
     for widget in console_settings_frame.winfo_children():
         widget.pack_forget()
@@ -147,7 +147,11 @@ root.title("Sternchen")
 root.iconbitmap('star.ico')
 
 frame = ctk.CTkFrame(root)
-frame.pack(pady=20, padx=20)
+frame.pack(pady=20, padx=20, side="left")
+
+dev_tools_frame = ctk.CTkFrame(root)
+dev_tools_frame.pack(pady=20, padx=20, side="left")
+dev_tools_frame.pack_forget()  # Initially hide the dev tools frame
 
 dev_tools_var = ctk.IntVar()
 dev_tools_checkbox = ctk.CTkCheckBox(frame, text="Dev-Tools", variable=dev_tools_var, command=toggle_dev_tools)
@@ -174,12 +178,8 @@ option_task.pack(pady=5)
 option_task.set("1")
 option_task.configure(command=show_output)
 
-button_show = ctk.CTkButton(frame, text="Output anzeigen(Debug)", command=show_output)
-button_show.pack_forget()  # Hide the button initially
-
-console_settings_frame = ctk.CTkFrame(root)
+console_settings_frame = ctk.CTkFrame(dev_tools_frame)
 console_settings_frame.pack(pady=10, padx=10)
-console_settings_frame.pack_forget()  # Initially hide the console settings frame
 
 label_console_width = ctk.CTkLabel(console_settings_frame, text="Console Width:")
 label_console_width.pack(pady=5)
@@ -207,8 +207,6 @@ button_apply_settings.pack(pady=5)
 
 button_reset_settings = ctk.CTkButton(console_settings_frame, text="Reset Settings", command=reset_console_settings)
 button_reset_settings.pack(pady=5)
-
-update_button_layout()
 
 text_output = ctk.CTkTextbox(root, width=300, height=300, font=("TkDefaultFont", 12))
 text_output.pack(pady=20, padx=20)
