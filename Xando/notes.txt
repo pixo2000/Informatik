@@ -5,3 +5,5 @@ ENDLICH PYCHARM!
 - open dev tools with F12 and not a checkbox
 - make checkbox nicer
 - make error nicer
+
+- auto console size
