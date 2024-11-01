@@ -77,7 +77,7 @@ entry_year.grid(row=1, column=1, padx=5)
 button_show = tk.Button(frame, text="Kalender anzeigen", command=show_calendar)
 button_show.grid(row=2, columnspan=2, pady=10)
 
-text_calendar = tk.Text(root, width=20, height=8)
+text_calendar = tk.Text(root, width=20, height=11)
 text_calendar.pack(pady=10)
 
 root.mainloop()
