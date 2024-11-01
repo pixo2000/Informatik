@@ -13,7 +13,9 @@
 # Formel: c + (1000*(y-b)) + ((1000/n)*(m + d -1))
 # Sternzeit immer 2 nachkommastellen
 #
-
+# am ende dann auch anders rum rechnen siehe link
+#
+#
 # s = schaltjahrnummer
 # s2 = für monat ob +1 sein soll
 # https://www.wikihow.com/Calculate-Stardates
@@ -31,7 +33,7 @@ if m = "Januar":
 if m = "Februar":
     m= 31
 if m = "März":
-    m = 59 + s
+    m = 59 + s2
 
 
 # Schaltjahrrechnung
@@ -50,4 +52,5 @@ while y > 4:
 # für s2 checken ob generell was übrig bleibt und wenn ja auf true setzen zum späteren abfragen
 
 # wann startet der aktuelle kalender
+# -> erst mal wissen wie der heisst
 # genauere schaltjahre(nicht nur alle 4 jahre sondern auch alle 100 ig)
