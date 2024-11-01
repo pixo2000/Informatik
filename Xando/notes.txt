@@ -3,3 +3,5 @@ ENDLICH PYCHARM!
 - dev setigs new window
 - open dev tools with F12 and not a checkbox
 - make checkbox nicer
+
+- check what happens when 0 is enterd

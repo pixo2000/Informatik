@@ -113,7 +113,6 @@ def update_button_layout():
         entry_stars.pack(side="left", padx=5)
         label_task.pack(side="left", padx=5)
         option_task.pack(side="left", padx=5)
-        button_show.pack(side="left", padx=5)
     else:  # Vertical
         dev_tools_checkbox.pack(pady=5, anchor="w")
         button_layout_switch.pack(pady=5, anchor="w")
@@ -121,7 +120,6 @@ def update_button_layout():
         entry_stars.pack(pady=5)
         label_task.pack(pady=5)
         option_task.pack(pady=5)
-        button_show.pack(pady=5)
 
     for widget in console_settings_frame.winfo_children():
         widget.pack_forget()
@@ -177,8 +175,7 @@ option_task.set("1")
 option_task.configure(command=show_output)
 
 button_show = ctk.CTkButton(frame, text="Output anzeigen(Debug)", command=show_output)
-button_show.pack(pady=5)
-button_show.pack_forget()  # Initially hide the button
+button_show.pack_forget()  # Hide the button initially
 
 console_settings_frame = ctk.CTkFrame(root)
 console_settings_frame.pack(pady=10, padx=10)
