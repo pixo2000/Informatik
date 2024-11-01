@@ -1,5 +1,5 @@
 # mir war langweilig weil unterrichtsbesprechung bullsht war
-
+import tkinter
 import tkinter as tk
 print(tkinter.__path__)
 

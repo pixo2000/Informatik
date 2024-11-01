@@ -1,11 +1,11 @@
-# aufgabe 1:
-# halt das mit sternen
+# Aufgabe 1:
+# Auflistung mit Sternen
 
-# aufgabe 2:
-# als pyramiede
+# Aufgabe 2:
+# als Pyramide
 
-# aufgabe 3:
-# kreis mit sternen
+# Aufgabe 3:
+# Kreis mit Sternen
 
 import tkinter as tk
 from tkinter import messagebox
@@ -17,9 +17,9 @@ def aufgabe1(stars):
     count = 1
 
     while count <= stars:
-        result += "*" * count
+        result += "*" * count + "\n"
         count += 1
-    
+
     return result
 
 # Aufgabe 2:
@@ -49,15 +49,16 @@ def aufgabe3(stars):
             j += 1
         result += line + "\n"
         i += 1
-    
+
     return result
 
 # GUI
 def show_output():
     try:
         stars = int(entry_stars.get())
-        if stars == 0:
-            messagebox.showerror("Fehler", "Bitte gib eine Zahl über 1 ein, um einen Output zu bekommen")
+        if stars < 1:
+            messagebox.showerror("Fehler", "Bitte gib eine Zahl größer als 0 ein, um einen Output zu bekommen")
+            return
 
         task = int(entry_task.get())
         if task == 1:
@@ -66,9 +67,12 @@ def show_output():
             output = aufgabe2(stars)
         elif task == 3:
             output = aufgabe3(stars)
-        
-        text_calendar.delete(1.0, tk.END)
-        text_calendar.insert(tk.END, output)
+        else:
+            messagebox.showerror("Fehler", "Bitte gib eine gültige Aufgabe (1, 2 oder 3) ein.")
+            return
+
+        text_output.delete(1.0, tk.END)
+        text_output.insert(tk.END, output)
     except ValueError:
         messagebox.showerror("Fehler", "Bitte geben Sie gültige Zahlen ein.")
 
@@ -93,7 +97,7 @@ entry_task.grid(row=1, column=1, padx=5)
 button_show = tk.Button(frame, text="Output anzeigen", command=show_output)
 button_show.grid(row=2, columnspan=2, pady=10)
 
-text_calendar = tk.Text(root, width=20, height=11)
-text_calendar.pack(pady=10)
+text_output = tk.Text(root, width=20, height=11)
+text_output.pack(pady=10)
 
 root.mainloop()
