@@ -1,6 +1,9 @@
 import pygame
 import importlib
-from config import maps
+from config import maps, host, port
+
+import socket
+import threading
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, obstacles, spawn_x, spawn_y):
@@ -100,10 +103,32 @@ def render_game(screen, player, all_sprites, obstacles):
 def instant_quit(app):
     app.running = False
 
+def receive_data(sock, app):
+    while app.running:
+        try:
+            data = sock.recv(1024)
+            if not data:
+                break
+            # Handle the received data (e.g., update game state)
+        except:
+            break
+    sock.close()
+
 def run_game(selected_map, start_button, app):
+    # Initialize the game
     screen = initialize_game()
     clock = pygame.time.Clock()
 
+    # Connect to the server
+    server_address = (host, port)  # Replace with your server's address and port
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.connect(server_address)
+
+    # Start a thread to receive data from the server
+    receive_thread = threading.Thread(target=receive_data, args=(sock, app))
+    receive_thread.start()
+
+    # Load the map and initialize the player
     map_config = maps[selected_map]
     map_module = importlib.import_module(f"maps.{map_config['File'].split('.')[0]}")
     game_map = map_module.Map()
@@ -120,6 +145,16 @@ def run_game(selected_map, start_button, app):
         render_game(screen, player, all_sprites, game_map.obstacles)
         clock.tick(60)
 
+        # Send player state to the server
+        player_state = f"{player.rect.x},{player.rect.y}"
+        sock.sendall(player_state.encode())
+
+        # Check if instant_quit is triggered
+        if not app.running:
+            pygame.quit()
+            break
+
     pygame.quit()
     start_button.pack(pady=20)  # Add the start button back after the game ends
     app.game_running = False  # Reset the flag when the game ends
+    sock.close()

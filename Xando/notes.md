@@ -13,11 +13,25 @@
 
 
 ### Aktuell:
-- snap-tap
+- check maps on client no desync
 - map is too small
 - add running(standart, when aiming/holding shift 50% speed) 
 - make game bigger
 - better design for gui
+- grafiken
+- server
+
+### Morgen:
+- Maps by server
+- HP-System
+- offline option to explore map
+
+# Die tage:
+- teams
+- ping with name and serverconsole to dc webhook
+- console tells you type(game start/ping)
+- login system
+
 
 ### Idk how:
 - add close gui also quits game
