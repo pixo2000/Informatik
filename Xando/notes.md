@@ -25,6 +25,7 @@
 - Maps by server
 - HP-System
 - offline option to explore map
+- nametags
 
 # Die tage:
 - teams
