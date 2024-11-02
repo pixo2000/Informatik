@@ -8,6 +8,7 @@ class Player(pygame.sprite.Sprite):
         self.image = pygame.Surface((50, 50))
         self.image.fill((0, 255, 0))  # Green player character
         self.rect = self.image.get_rect(center=(spawn_x, spawn_y))
+        self.pressed_keys = []
 
         # Ensure the player does not spawn inside an obstacle
         while pygame.sprite.spritecollideany(self, obstacles):
@@ -20,25 +21,49 @@ class Player(pygame.sprite.Sprite):
 
     def update(self, obstacles):
         keys = pygame.key.get_pressed()
-        if keys[pygame.K_LEFT]:
-            self.rect.x -= 5
-        if keys[pygame.K_RIGHT]:
-            self.rect.x += 5
-        if keys[pygame.K_UP]:
-            self.rect.y -= 5
-        if keys[pygame.K_DOWN]:
-            self.rect.y += 5
+        dx, dy = 0, 0
 
-        # Check for collisions with obstacles
+        # Update the list of currently pressed keys
+        if keys[pygame.K_a] and pygame.K_a not in self.pressed_keys:
+            self.pressed_keys.append(pygame.K_a)
+        if keys[pygame.K_d] and pygame.K_d not in self.pressed_keys:
+            self.pressed_keys.append(pygame.K_d)
+        if keys[pygame.K_w] and pygame.K_w not in self.pressed_keys:
+            self.pressed_keys.append(pygame.K_w)
+        if keys[pygame.K_s] and pygame.K_s not in self.pressed_keys:
+            self.pressed_keys.append(pygame.K_s)
+
+        # Remove keys that are no longer pressed
+        if not keys[pygame.K_a] and pygame.K_a in self.pressed_keys:
+            self.pressed_keys.remove(pygame.K_a)
+        if not keys[pygame.K_d] and pygame.K_d in self.pressed_keys:
+            self.pressed_keys.remove(pygame.K_d)
+        if not keys[pygame.K_w] and pygame.K_w in self.pressed_keys:
+            self.pressed_keys.remove(pygame.K_w)
+        if not keys[pygame.K_s] and pygame.K_s in self.pressed_keys:
+            self.pressed_keys.remove(pygame.K_s)
+
+        # Determine movement based on the most recent key press
+        if self.pressed_keys:
+            last_key = self.pressed_keys[-1]
+            if last_key == pygame.K_a:
+                dx -= 5
+            if last_key == pygame.K_d:
+                dx += 5
+            if last_key == pygame.K_w:
+                dy -= 5
+            if last_key == pygame.K_s:
+                dy += 5
+
+        # Move the player horizontally and check for collisions
+        self.rect.x += dx
         if pygame.sprite.spritecollideany(self, obstacles):
-            if keys[pygame.K_LEFT]:
-                self.rect.x += 5
-            if keys[pygame.K_RIGHT]:
-                self.rect.x -= 5
-            if keys[pygame.K_UP]:
-                self.rect.y += 5
-            if keys[pygame.K_DOWN]:
-                self.rect.y -= 5
+            self.rect.x -= dx  # Undo the horizontal move if there's a collision
+
+        # Move the player vertically and check for collisions
+        self.rect.y += dy
+        if pygame.sprite.spritecollideany(self, obstacles):
+            self.rect.y -= dy  # Undo the vertical move if there's a collision
 
 def initialize_game():
     pygame.init()
@@ -55,10 +80,21 @@ def handle_events():
 def update_game_state(player, obstacles):
     player.update(obstacles)
 
-def render_game(screen, all_sprites, obstacles):
+def render_game(screen, player, all_sprites, obstacles):
     screen.fill((0, 0, 0))
-    all_sprites.draw(screen)
-    obstacles.draw(screen)
+
+    # Calculate the offset to center the player
+    offset_x = screen.get_width() // 2 - player.rect.centerx
+    offset_y = screen.get_height() // 2 - player.rect.centery
+
+    # Draw all sprites with the calculated offset
+    for sprite in all_sprites:
+        screen.blit(sprite.image, (sprite.rect.x + offset_x, sprite.rect.y + offset_y))
+
+    # Draw obstacles with the calculated offset
+    for obstacle in obstacles:
+        screen.blit(obstacle.image, (obstacle.rect.x + offset_x, obstacle.rect.y + offset_y))
+
     pygame.display.flip()
 
 def instant_quit(app):
@@ -81,7 +117,7 @@ def run_game(selected_map, start_button, app):
         if not handle_events():
             break
         update_game_state(player, game_map.obstacles)
-        render_game(screen, all_sprites, game_map.obstacles)
+        render_game(screen, player, all_sprites, game_map.obstacles)
         clock.tick(60)
 
     pygame.quit()

@@ -12,10 +12,14 @@
 - Port: 52983
 
 
-### Errors:
-- camera doesnt move with you
+### Aktuell:
+- snap-tap
 - map is too small
-- movement wasd
+- add running(standart, when aiming/holding shift 50% speed) 
+- make game bigger
+- better design for gui
+
+### Idk how:
 - add close gui also quits game
 
 
@@ -35,6 +39,7 @@
 - Customization
 - Borderless
 - Codes im Store
+- Settings(Grafik und steuerung)
 
 
 #### Danach:

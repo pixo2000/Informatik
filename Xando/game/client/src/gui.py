@@ -44,11 +44,11 @@ def create_gui(start_game_func):
     map_option_menu = ctk.CTkOptionMenu(app, variable=selected_map, values=map_names)
     map_option_menu.pack(pady=10)
 
-    start_button = ctk.CTkButton(app, text="Start Game", command=start_game)
-    start_button.pack(pady=20)
-
     quit_button = ctk.CTkButton(app, text="Quit", command=on_closing)
     quit_button.pack(pady=10)
+
+    start_button = ctk.CTkButton(app, text="Start Game", command=start_game)
+    start_button.pack(pady=20)
 
     app.protocol("WM_DELETE_WINDOW", on_closing)  # Properly close the GUI
     app.mainloop()
