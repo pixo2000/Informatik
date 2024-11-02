@@ -1,3 +1,12 @@
+# Aufgabe 1:
+# Auflistung mit Sternen
+
+# Aufgabe 2:
+# als Pyramide
+
+# Aufgabe 3:
+# Kreis mit Sternen
+
 import customtkinter as ctk
 from tkinter import messagebox, ttk
 import math
