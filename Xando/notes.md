@@ -30,3 +30,12 @@
 - Customization
 - Borderless
 - Codes im Store
+
+
+#### Danach:
+- Echtgeld
+- Mehr Waffen
+- Mehr Maps
+- Discord RPC
+- Mobile Version
+- Browser Version ohne Login mit autovpn
