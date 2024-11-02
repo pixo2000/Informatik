@@ -15,6 +15,7 @@
 - Crash when moving GUI while in game
 
 ### Jetzt:
+- accounts -> nametags
 - Teams
 - Clients auf demselben server
 
@@ -51,7 +52,7 @@
 
 ### Ziel bis weinachten:
 - Es funktioniert ohne bugs
-- 3 Modi: Duel, Team, Battle Royale
+- 3 Modi: Duel, Team(3v3&5v5), Battle Royale
 - Party System
 - 5 Maps
 - Login system
