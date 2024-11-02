@@ -2,5 +2,23 @@
   "Server": {
     "Host": "localhost",
     "Port": 52983
+  },
+  "Maps": {
+    "Map_1": {
+        "Name": "Map_2",
+        "File": "map_1.py",
+        "Spawn": {
+            "X": 200,
+            "Y": 200
+        }
+    },
+    "Map_2": {
+        "Name": "Map_2",
+        "File": "map_2.py",
+        "Spawn": {
+            "X": -150,
+            "Y": -150
+        }
+    }
   }
 }

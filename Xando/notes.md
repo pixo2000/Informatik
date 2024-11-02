@@ -1,5 +1,3 @@
-# ENDLICH PYCHARM!
-
 # Das Game
 ### Idee:
 - Ein game das online und offline läuft(Kommt auf den PC an und ob er gerade online ist)
@@ -13,3 +11,22 @@
 ## Server:
 - Port: 52983
 
+
+### Errors:
+- Fix error when closing map in console
+
+
+### Ziel bis weinachten:
+- Es funktioniert ohne bugs
+- 5 Maps
+- Login system
+- 5 Waffen
+- Anticheat
+- Bessere Grafiken
+- Server
+- Leaderboard
+- Chat
+- Shop
+- Customization
+- Borderless
+- Codes im Store
