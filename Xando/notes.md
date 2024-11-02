@@ -13,11 +13,16 @@
 
 
 ### Errors:
-- Fix error when closing map in console
+- camera doesnt move with you
+- map is too small
+- movement wasd
+- add close gui also quits game
 
 
 ### Ziel bis weinachten:
 - Es funktioniert ohne bugs
+- 3 Modi: Duel, Team, Battle Royale
+- Party System
 - 5 Maps
 - Login system
 - 5 Waffen

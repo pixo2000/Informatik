@@ -1,7 +1,6 @@
 import pygame
 import importlib
 from config import maps
-from gui import create_gui
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, obstacles, spawn_x, spawn_y):
@@ -62,7 +61,10 @@ def render_game(screen, all_sprites, obstacles):
     obstacles.draw(screen)
     pygame.display.flip()
 
-def run_game(selected_map):
+def instant_quit(app):
+    app.running = False
+
+def run_game(selected_map, start_button, app):
     screen = initialize_game()
     clock = pygame.time.Clock()
 
@@ -75,12 +77,13 @@ def run_game(selected_map):
     player = Player(game_map.obstacles, spawn_x, spawn_y)
     all_sprites = pygame.sprite.Group(player)
 
-    running = True
-    while running:
-        running = handle_events()
+    while app.running:
+        if not handle_events():
+            break
         update_game_state(player, game_map.obstacles)
         render_game(screen, all_sprites, game_map.obstacles)
         clock.tick(60)
 
     pygame.quit()
-    create_gui(run_game)  # Return to GUI after quitting the game
+    start_button.pack(pady=20)  # Add the start button back after the game ends
+    app.game_running = False  # Reset the flag when the game ends

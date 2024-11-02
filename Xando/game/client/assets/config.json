@@ -4,20 +4,18 @@
     "Port": 52983
   },
   "Maps": {
-    "Map_1": {
-        "Name": "Map_2",
+    "Map 1": {
         "File": "map_1.py",
         "Spawn": {
             "X": 200,
             "Y": 200
         }
     },
-    "Map_2": {
-        "Name": "Map_2",
+    "Map 2": {
         "File": "map_2.py",
         "Spawn": {
-            "X": -150,
-            "Y": -150
+            "X": 100,
+            "Y": 100
         }
     }
   }
