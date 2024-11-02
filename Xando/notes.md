@@ -14,8 +14,15 @@
 ### Errors:
 - Crash when moving GUI while in game
 
+### Jetzt:
+- Teams
+- Clients auf demselben server
+
 
 ### Aktuell:
+- servergui
+- maybe live map reload/map maker
+- mehr blöcke(nur für ein team etc)
 - esc menu/quit with esc
 - movement with w+a to yeah
 - check maps on client no desync

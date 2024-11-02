@@ -8,7 +8,7 @@ class Map:
 
     def create_world_border(self):
         border_thickness = 10
-        screen_width, screen_height = 2000, 600
+        screen_width, screen_height = 800, 600
         borders = [
             pygame.Rect(0, 0, screen_width, border_thickness),  # Top border
             pygame.Rect(0, 0, border_thickness, screen_height),  # Left border
@@ -24,10 +24,9 @@ class Map:
 
     def create_obstacles(self):
         obstacle_positions = [
-            (100, 100, 200, 50),
-            (300, 200, 100, 150),
-            (500, 350, 150, 50),
-            (650, 100, 50, 200)
+            (200, 150, 100, 50),
+            (400, 300, 150, 75),
+            (600, 450, 50, 100)
         ]
         for pos in obstacle_positions:
             obstacle = pygame.sprite.Sprite()

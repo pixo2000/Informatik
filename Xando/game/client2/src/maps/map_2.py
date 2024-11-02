@@ -8,7 +8,7 @@ class Map:
 
     def create_world_border(self):
         border_thickness = 10
-        screen_width, screen_height = 2000, 600
+        screen_width, screen_height = 800, 600
         borders = [
             pygame.Rect(0, 0, screen_width, border_thickness),  # Top border
             pygame.Rect(0, 0, border_thickness, screen_height),  # Left border
