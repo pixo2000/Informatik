@@ -7,8 +7,6 @@
 # Aufgabe 3:
 # Kreis mit Sternen
 
-import tkinter as tk
-from tkinter import messagebox
 import math
 
 # Aufgabe 1:
@@ -52,15 +50,14 @@ def aufgabe3(stars):
 
     return result
 
-# GUI
-def show_output():
+def main():
     try:
-        stars = int(entry_stars.get())
+        stars = int(input("Bitte gib die Anzahl der Sterne ein: "))
         if stars < 1:
-            messagebox.showerror("Fehler", "Bitte gib eine Zahl größer als 0 ein, um einen Output zu bekommen")
+            print("Fehler: Bitte gib eine Zahl größer als 0 ein, um einen Output zu bekommen")
             return
 
-        task = int(entry_task.get())
+        task = int(input("Bitte gib die Aufgabe ein (1, 2 oder 3): "))
         if task == 1:
             output = aufgabe1(stars)
         elif task == 2:
@@ -68,36 +65,12 @@ def show_output():
         elif task == 3:
             output = aufgabe3(stars)
         else:
-            messagebox.showerror("Fehler", "Bitte gib eine gültige Aufgabe (1, 2 oder 3) ein.")
+            print("Fehler: Bitte gib eine gültige Aufgabe (1, 2 oder 3) ein.")
             return
 
-        text_output.delete(1.0, tk.END)
-        text_output.insert(tk.END, output)
+        print(output)
     except ValueError:
-        messagebox.showerror("Fehler", "Bitte geben Sie gültige Zahlen ein.")
+        print("Fehler: Bitte geben Sie gültige Zahlen ein.")
 
-root = tk.Tk()
-root.title("Sternchen")
-
-frame = tk.Frame(root)
-frame.pack(pady=10)
-
-label_stars = tk.Label(frame, text="Sterne:")
-label_stars.grid(row=0, column=0, padx=5)
-
-entry_stars = tk.Entry(frame)
-entry_stars.grid(row=0, column=1, padx=5)
-
-label_task = tk.Label(frame, text="Aufgabe:")
-label_task.grid(row=1, column=0, padx=5)
-
-entry_task = tk.Entry(frame)
-entry_task.grid(row=1, column=1, padx=5)
-
-button_show = tk.Button(frame, text="Output anzeigen", command=show_output)
-button_show.grid(row=2, columnspan=2, pady=10)
-
-text_output = tk.Text(root, width=20, height=11)
-text_output.pack(pady=10)
-
-root.mainloop()
+if __name__ == "__main__":
+    main()
