@@ -70,7 +70,7 @@ class Player(pygame.sprite.Sprite):
 
 def initialize_game():
     pygame.init()
-    screen = pygame.display.set_mode((800, 600))
+    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
     pygame.display.set_caption("2D Shooter")
     return screen
 

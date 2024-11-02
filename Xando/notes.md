@@ -11,15 +11,19 @@
 ## Server:
 - Port: 52983
 
+### Errors:
+- Crash when moving GUI while in game
+
 
 ### Aktuell:
+- esc menu/quit with esc
+- movement with w+a to yeah
 - check maps on client no desync
 - map is too small
 - add running(standart, when aiming/holding shift 50% speed) 
 - make game bigger
 - better design for gui
 - grafiken
-- server
 
 ### Morgen:
 - Maps by server
@@ -64,3 +68,7 @@
 - Discord RPC
 - Mobile Version
 - Browser Version ohne Login mit autovpn
+
+
+### ganz viel später:
+- version für nintendo switch und net nur cracked switch(PS3 incomming?)
