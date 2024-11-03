@@ -15,6 +15,8 @@
 - Crash when moving GUI while in game
 
 ### Jetzt:
+- Movement senden, empfangen, brodcasten und rendern
+
 - Gui dark mode always users have no choice
 - accounts -> nametags
 - Teams

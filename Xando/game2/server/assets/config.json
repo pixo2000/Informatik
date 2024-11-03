@@ -1,0 +1,28 @@
+{
+  "Server": {
+    "Port": 52983
+  },
+  "Maps": {
+    "Map 1": {
+        "File": "map_1.py",
+        "Spawn": {
+            "X": 200,
+            "Y": 200
+        }
+    },
+    "Map 2": {
+        "File": "map_2.py",
+        "Spawn": {
+            "X": 100,
+            "Y": 100
+        }
+    },
+    "Map 3": {
+        "File": "map_3.py",
+        "Spawn": {
+            "X": 0,
+            "Y": 0
+        }
+    }
+  }
+}
