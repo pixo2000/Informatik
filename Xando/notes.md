@@ -15,6 +15,7 @@
 - Crash when moving GUI while in game
 
 ### Jetzt:
+- gui dark mode always users have no choice
 - accounts -> nametags
 - Teams
 - Clients auf demselben server
