@@ -1,7 +1,7 @@
 import socket
 from _thread import *
 import sys
-# error can be fixed: the client packet should start with [Ping] or [Join] and the server needs to detect that and if its just ping dont expect anything
+# error can be fixed: the client packet should start with [Ping] or [Join] and the server needs to detect that and if its just ping dont expect Anything
 
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
