@@ -1,8 +1,9 @@
 import customtkinter
 import os
-from PIL import Image
+from PIL import Image # Package name is Pillow!!!
 from game import start_game  # Import the start_game function
-
+# gui disable
+# green server light
 
 class App(customtkinter.CTk):
     def __init__(self):
