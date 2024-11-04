@@ -2,6 +2,7 @@ import customtkinter as ctk
 from config import map_names, host, port
 import socket
 from tkinter import messagebox
+from game import start_game  # Import the start_game function
 
 class CustomApp(ctk.CTk):
     def __init__(self, *args, **kwargs):
@@ -40,9 +41,9 @@ def create_gui(start_game_func):
                                      "Unable to connect to the server. Please make sure the server is running.")
                 return
 
-            start_game() # fix this ig
+            start_game_func(selected_map.get())  # Call the start_game function from game.py
             start_button.pack_forget()  # Remove the start button
-            start_game_func(selected_map.get(), start_button, app)  # Pass the selected map, start button, and app
+            app.game_running = True  # Set the game running flag to True
 
     def on_closing():
         app.quit()  # End the mainloop
