@@ -116,9 +116,7 @@ class App(customtkinter.CTk):
         print("Offline checkbox toggled")
 
     def start_game_1(self):
-        self.disable_buttons()
         start_game()  # Call the start_game function from game.py
-        self.enable_buttons()
 
     def disable_buttons(self):
         for widget in self.winfo_children():
