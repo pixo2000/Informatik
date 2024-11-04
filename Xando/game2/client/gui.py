@@ -1,9 +1,12 @@
 import customtkinter
 import os
-from PIL import Image # Package name is Pillow!!!
+import threading
+import time
+from PIL import Image  # Package name is Pillow!!!
 from game import start_game  # Import the start_game function
-# gui disable
-# green server light
+import socket
+# disable gui while ingame(maybe with variable from game.py that you check here.
+# error: crash on start button when server online
 
 class App(customtkinter.CTk):
     def __init__(self):
@@ -57,8 +60,11 @@ class App(customtkinter.CTk):
         self.home_frame = customtkinter.CTkFrame(self, corner_radius=0, fg_color="transparent")
         self.home_frame.grid_columnconfigure(0, weight=1)
 
-        self.start_game_button = customtkinter.CTkButton(self.home_frame, text="Start Game", command=self.start_game)
+        self.start_game_button = customtkinter.CTkButton(self.home_frame, text="Start Game", command=self.start_game, state="disabled")
         self.start_game_button.grid(row=0, column=0, padx=20, pady=10)
+
+        self.server_status_led = customtkinter.CTkLabel(self.home_frame, text="●", text_color="red", font=customtkinter.CTkFont(size=20))
+        self.server_status_led.grid(row=1, column=0, padx=20, pady=10)
         # ------------------------------
 
         # Second Frame Section
@@ -73,6 +79,9 @@ class App(customtkinter.CTk):
 
         # select default frame
         self.select_frame_by_name("home")
+
+        # Start server status check
+        self.check_server_status()
 
     def select_frame_by_name(self, name):
         # set button color for selected button
@@ -124,6 +133,20 @@ class App(customtkinter.CTk):
             if isinstance(widget, customtkinter.CTkButton):
                 widget.configure(state="normal")
 
+    def check_server_status(self):
+        def ping_server():
+            while True:
+                try:
+                    # Replace 'localhost' and 52983 with your server's address and port
+                    with socket.create_connection(("localhost", 52983), timeout=5):
+                        self.server_status_led.configure(text_color="green")
+                        self.start_game_button.configure(state="normal")
+                except OSError:
+                    self.server_status_led.configure(text_color="red")
+                    self.start_game_button.configure(state="disabled")
+                time.sleep(10)
+
+        threading.Thread(target=ping_server, daemon=True).start()
 
 if __name__ == "__main__":
     app = App()
