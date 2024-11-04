@@ -60,7 +60,7 @@ class App(customtkinter.CTk):
         self.home_frame = customtkinter.CTkFrame(self, corner_radius=0, fg_color="transparent")
         self.home_frame.grid_columnconfigure(0, weight=1)
 
-        self.start_game_button = customtkinter.CTkButton(self.home_frame, text="Start Game", command=self.start_game, state="disabled")
+        self.start_game_button = customtkinter.CTkButton(self.home_frame, text="Start Game", command=self.start_game_1, state="disabled")
         self.start_game_button.grid(row=0, column=0, padx=20, pady=10)
 
         self.server_status_led = customtkinter.CTkLabel(self.home_frame, text="●", text_color="red", font=customtkinter.CTkFont(size=20))
@@ -112,13 +112,10 @@ class App(customtkinter.CTk):
     def frame_3_button_event(self):
         self.select_frame_by_name("account")
 
-    def change_appearance_mode_event(self, new_appearance_mode):
-        customtkinter.set_appearance_mode(new_appearance_mode)
-
     def dummy_function(self):
         print("Offline checkbox toggled")
 
-    def start_game(self):
+    def start_game_1(self):
         self.disable_buttons()
         start_game()  # Call the start_game function from game.py
         self.enable_buttons()

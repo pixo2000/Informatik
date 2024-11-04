@@ -1,25 +1,25 @@
 import pygame
 from network import Network
+# error can be fixed: the client packet should start with [Ping] or [Join] and the server needs to detect that and if its just ping dont expect anything
 
 
 class Player():
     width = height = 50
 
-    def __init__(self, startx, starty, color=(255,0,0)):
+    def __init__(self, startx, starty, color=(255, 0, 0)):
         self.x = startx
         self.y = starty
         self.velocity = 2
         self.color = color
 
     def draw(self, g):
-        pygame.draw.rect(g, self.color ,(self.x, self.y, self.width, self.height), 0)
+        pygame.draw.rect(g, self.color, (self.x, self.y, self.width, self.height), 0)
 
     def move(self, dirn):
         """
         :param dirn: 0 - 3 (right, left, up, down)
         :return: None
         """
-
         if dirn == 0:
             self.x += self.velocity
         elif dirn == 1:
@@ -29,15 +29,14 @@ class Player():
         else:
             self.y += self.velocity
 
-
 class Game:
-
     def __init__(self, w, h):
         self.net = Network()
+        self.send_initial_map_name()
         self.width = w
         self.height = h
         self.player = Player(50, 50)
-        self.player2 = Player(100,100)
+        self.player2 = Player(100, 100)
         self.canvas = Canvas(self.width, self.height, "Testing...")
 
     def run(self):
@@ -72,7 +71,7 @@ class Game:
                     self.player.move(3)
 
             # Send Network Stuff
-            self.player2.x, self.player2.y = self.parse_data(self.send_data())
+            self.player2.x, self.player2.y = self.parse_data(self.send_start_game())
 
             # Update Canvas
             self.canvas.draw_background()
@@ -82,12 +81,16 @@ class Game:
 
         pygame.quit()
 
-    def send_data(self):
-        """
-        Send position to server
-        :return: None
-        """
-        data = str(self.net.id) + ":" + str(self.player.x) + "," + str(self.player.y)
+    def send_initial_map_name(self):
+        initial_map_name = "default_map"  # Replace with your actual map name
+        self.net.send(f"initial_map_name:{initial_map_name}")
+
+    def send_ping(self):
+        response = self.net.send("ping:")
+        return response
+
+    def send_start_game(self):
+        data = f"start_game:{self.net.id}:{self.player.x},{self.player.y}"
         reply = self.net.send(data)
         return reply
 
@@ -97,20 +100,17 @@ class Game:
             d = data.split(":")[1].split(",")
             return int(d[0]), int(d[1])
         except:
-            return 0,0
-
+            return 0, 0
 
 def start_game():
     game = Game(500, 500)
     game.run()
 
-
 class Canvas:
-
     def __init__(self, w, h, name="None"):
         self.width = w
         self.height = h
-        self.screen = pygame.display.set_mode((w,h))
+        self.screen = pygame.display.set_mode((w, h))
         pygame.display.set_caption(name)
 
     @staticmethod
@@ -120,12 +120,11 @@ class Canvas:
     def draw_text(self, text, size, x, y):
         pygame.font.init()
         font = pygame.font.SysFont("comicsans", size)
-        render = font.render(text, 1, (0,0,0))
-
-        self.screen.draw(render, (x,y))
+        render = font.render(text, 1, (0, 0, 0))
+        self.screen.draw(render, (x, y))
 
     def get_canvas(self):
         return self.screen
 
     def draw_background(self):
-        self.screen.fill((255,255,255))
+        self.screen.fill((255, 255, 255))

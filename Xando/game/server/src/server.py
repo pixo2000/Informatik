@@ -50,9 +50,12 @@ def start_server():
         threading.Thread(target=handle_client, args=(client_socket, client_id)).start()
 
 def receive_initial_map_name(client_socket):
-    # This function should receive the initial map name from the client
-    map_name = client_socket.recv(1024).decode('utf-8')
-    return map_name
+    data = client_socket.recv(1024).decode('utf-8')
+    if data.startswith("initial_map_name:"):
+        map_name = data.split(":")[1]
+        return map_name
+    else:
+        raise ValueError("Expected initial map name")
 
 if __name__ == "__main__":
     start_server()
