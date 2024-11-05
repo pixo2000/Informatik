@@ -27,8 +27,8 @@ clock = pygame.time.Clock()
 # Function to get angle to the mouse position
 def get_angle_to_mouse(player_pos):
     mouse_x, mouse_y = pygame.mouse.get_pos()
-    dx = mouse_x - SCREEN_WIDTH // 2
-    dy = mouse_y - SCREEN_HEIGHT // 2
+    dx = mouse_x - player_pos[0]
+    dy = mouse_y - player_pos[1]
     return math.degrees(math.atan2(dy, dx))
 
 # Main game loop
@@ -56,6 +56,8 @@ while running:
         last_input = "s"
     elif keys[pygame.K_d]:
         last_input = "d"
+    else:
+        last_input = None
 
     if last_input == "w":
         player_pos[1] -= speed
@@ -66,23 +68,19 @@ while running:
     elif last_input == "d":
         player_pos[0] += speed
 
-    # Keep the player centered in the screen
+    # Keep the player within the screen bounds
     player_pos[0] = max(player_radius, min(SCREEN_WIDTH - player_radius, player_pos[0]))
     player_pos[1] = max(player_radius, min(SCREEN_HEIGHT - player_radius, player_pos[1]))
 
     # Draw player
     angle = get_angle_to_mouse(player_pos)
-    pygame.draw.circle(screen, GREEN, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), player_radius)
+    pygame.draw.circle(screen, GREEN, player_pos, player_radius)
 
     # Draw green stick in the direction of the mouse
     stick_length = 50
-    end_x = SCREEN_WIDTH // 2 + stick_length * math.cos(math.radians(angle))
-    end_y = SCREEN_HEIGHT // 2 + stick_length * math.sin(math.radians(angle))
-    pygame.draw.line(screen, GREEN, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), (end_x, end_y), 3)
-
-    # Draw world border
-    border_thickness = 5
-    pygame.draw.rect(screen, WHITE, (0, 0, SCREEN_WIDTH, SCREEN_HEIGHT), border_thickness)
+    end_x = player_pos[0] + stick_length * math.cos(math.radians(angle))
+    end_y = player_pos[1] + stick_length * math.sin(math.radians(angle))
+    pygame.draw.line(screen, GREEN, player_pos, (end_x, end_y), 3)
 
     # Update the display
     pygame.display.flip()

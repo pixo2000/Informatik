@@ -11,9 +11,9 @@ for i in range(diameter):
     line = ""
     for j in range(diameter):
         if math.sqrt((i - stars) ** 2 + (j - stars) ** 2) <= stars:
-            line += "*"
+            line += "* "
         else:
-            line += " "
+            line += "  "
     # Center the line in the console
     total_leading_spaces = (console_width - len(line)) // 2
     centered_line = " " * total_leading_spaces + line.rstrip()

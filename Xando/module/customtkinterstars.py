@@ -37,7 +37,7 @@ def aufgabe2(stars):
     return result
 
 
-def aufgabe3(stars):
+def aufgabe3(stars): # is eigentlich die falsche formel. ungenauigkeit in zeile 1 und ende is deshalb
     result = ""
     diameter = 2 * stars + 1
     console_width = get_console_width()
@@ -46,9 +46,9 @@ def aufgabe3(stars):
         line = ""
         for j in range(diameter):
             if math.sqrt((i - stars) ** 2 + (j - stars) ** 2) <= stars:
-                line += "*"
+                line += "* "
             else:
-                line += " "
+                line += "  "
         centered_line = center_line_in_console(line, console_width)
         result += centered_line + "\n"
 
@@ -190,7 +190,7 @@ option_task.pack(pady=5)
 option_task.set("1")
 option_task.configure(command=show_output)
 
-text_output = ctk.CTkTextbox(root, width=300, height=300, font=("TkDefaultFont", 12))
+text_output = ctk.CTkTextbox(root, width=300, height=300, font=("Courier", 12))
 text_output.pack(pady=20, padx=20, side="top")
 
 root.bind('<F12>', open_debug_window)
