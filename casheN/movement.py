@@ -25,7 +25,7 @@ WHITE = (255, 255, 255)
 
 # Player settings
 player_pos = [SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2]  # Initial player position at the center of the screen
-player_speed = 50  # Player movement speed
+player_speed = 1000  # Player movement speed
 slow_speed_factor = 0.5  # Speed factor when shift is held
 player_radius = 40  # Radius of the player circle
 
