@@ -4,6 +4,8 @@
 # player cannot move out of screen
 # add map so i can do start_game(mapname)
 
+# Tip: make player slower and and rezise player etc
+
 import pygame
 import math
 
