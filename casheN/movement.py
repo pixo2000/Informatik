@@ -138,6 +138,3 @@ while running:
 
 # Quit pygame
 pygame.quit()
-
-# Quit pygame
-pygame.quit()
