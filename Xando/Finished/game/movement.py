@@ -4,6 +4,9 @@
 # player cannot move out of screen
 # add map so i can do start_game(mapname)
 
+
+# WICHTIG: noch schräg
+
 import pygame
 import math
 
