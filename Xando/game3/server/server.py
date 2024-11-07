@@ -3,6 +3,10 @@ import ssl
 import threading
 from auth import authenticate_user, register_user, delete_user_by_username, change_user_password, reset_user_password
 
+# see roadmap.md
+# wtf sind admin commands hin -> add user lock later
+
+
 # Server settings
 HOST = 'localhost'
 PORT = 12345

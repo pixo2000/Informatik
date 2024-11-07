@@ -38,8 +38,8 @@ def aufgabe2(stars):
 
 
 def aufgabe3(stars): # is eigentlich die falsche formel. ungenauigkeit in zeile 1 und ende is deshalb
-    result = ""
-    diameter = 2 * stars + 1
+    result = "" # radius mal 2 pi für umfang
+    diameter = 2 * stars + 1 # fläche: pi r^2
     console_width = get_console_width()
 
     for i in range(diameter):
