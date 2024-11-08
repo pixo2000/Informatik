@@ -3,6 +3,7 @@ import math
 import shutil
 from tkinter import messagebox, font
 
+# broke debug window but fixed ausgabe3
 
 def get_console_width():
     return shutil.get_terminal_size().columns
@@ -37,15 +38,16 @@ def aufgabe2(stars):
     return result
 
 
-def aufgabe3(stars): # is eigentlich die falsche formel. ungenauigkeit in zeile 1 und ende is deshalb
-    result = "" # radius mal 2 pi für umfang
-    diameter = 2 * stars + 1 # fläche: pi r^2
+def aufgabe3(stars):
+    result = ""
+    radius = stars
+    diameter = 2 * radius + 1
     console_width = get_console_width()
 
-    for i in range(diameter):
+    for y in range(-radius, radius + 1):
         line = ""
-        for j in range(diameter):
-            if math.sqrt((i - stars) ** 2 + (j - stars) ** 2) <= stars:
+        for x in range(-radius, radius + 1):
+            if x**2 + y**2 <= radius**2:
                 line += "* "
             else:
                 line += "  "
@@ -91,23 +93,9 @@ def show_output(*args):
 
 
 def adjust_console_size(output, width_var, height_var, selected_font):
-    lines = output.split("\n")
-    max_line_length = max(len(line) for line in lines)
-    num_lines = len(lines)
-
-    min_width = int(width_var.get())
-    min_height = int(height_var.get())
-
-    # Get the font metrics for the selected font
-    fnt = font.Font(family=selected_font, size=12)
-    char_width = fnt.measure("0")  # Average width of a character
-
-    # Calculate the new width in pixels
-    new_width_pixels = max(min_width * char_width, max_line_length * char_width)
-    new_height = max(min_height, num_lines)
-
-    # Convert width from pixels to characters
-    new_width_chars = max(min_width, int(new_width_pixels / char_width))
+    # Set fixed width and height
+    new_width_chars = 550
+    new_height = 550
 
     # Console size adjustment
     text_output.configure(width=new_width_chars, height=new_height)
@@ -128,21 +116,21 @@ def open_debug_window(event=None):
     label_font.pack(pady=5)
 
     available_fonts = list(font.families())
-    font_var = ctk.StringVar(value="TkDefaultFont")
+    font_var = ctk.StringVar(value="Courier")
     dropdown_font = ctk.CTkOptionMenu(debug_window, variable=font_var, values=available_fonts)
     dropdown_font.pack(pady=5)
 
     label_width = ctk.CTkLabel(debug_window, text="Breite:")
     label_width.pack(pady=5)
 
-    width_var = ctk.StringVar(value="300")
+    width_var = ctk.StringVar(value="550")
     entry_width = ctk.CTkEntry(debug_window, textvariable=width_var)
     entry_width.pack(pady=5)
 
     label_height = ctk.CTkLabel(debug_window, text="Höhe:")
     label_height.pack(pady=5)
 
-    height_var = ctk.StringVar(value="300")
+    height_var = ctk.StringVar(value="550")
     entry_height = ctk.CTkEntry(debug_window, textvariable=height_var)
     entry_height.pack(pady=5)
 
@@ -153,8 +141,8 @@ def open_debug_window(event=None):
 
     def reset_settings():
         font_var.set("TkDefaultFont")
-        width_var.set("300")
-        height_var.set("300")
+        width_var.set("550")
+        height_var.set("550")
 
     font_var.trace_add("write", apply_settings)
     width_var.trace_add("write", apply_settings)
@@ -190,7 +178,7 @@ option_task.pack(pady=5)
 option_task.set("1")
 option_task.configure(command=show_output)
 
-text_output = ctk.CTkTextbox(root, width=300, height=300, font=("Courier", 12))
+text_output = ctk.CTkTextbox(root, width=550, height=550, font=("Courier", 12))
 text_output.pack(pady=20, padx=20, side="top")
 
 root.bind('<F12>', open_debug_window)
