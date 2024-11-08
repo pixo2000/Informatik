@@ -17,6 +17,7 @@ pygame.display.set_caption("Pygame Game")
 BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
 WHITE = (255, 255, 255)
+RED = (255, 0, 0)
 
 # Player settings
 player_speed = 5
@@ -43,10 +44,13 @@ map_module = importlib.import_module(map_name)
 # Use the spawn point from the selected map
 player_pos = list(map_module.spawn_point)
 blocks = map_module.blocks
+world_border = map_module.world_border
 
 # Function to check for collisions
 def check_collision(new_pos):
     player_rect = pygame.Rect(new_pos[0] - player_radius, new_pos[1] - player_radius, player_radius * 2, player_radius * 2)
+    if not world_border.contains(player_rect):
+        return True
     for block in blocks:
         if player_rect.colliderect(block):
             return True
@@ -102,15 +106,24 @@ while running:
     if not check_collision(new_pos):
         player_pos = new_pos
 
-    player_pos[0] = max(player_radius, min(SCREEN_WIDTH - player_radius, player_pos[0]))
-    player_pos[1] = max(player_radius, min(SCREEN_HEIGHT - player_radius, player_pos[1]))
+    # Center the camera on the player
+    camera_x = player_pos[0] - SCREEN_WIDTH // 2
+    camera_y = player_pos[1] - SCREEN_HEIGHT // 2
 
+    # Draw the world border
+    pygame.draw.rect(screen, WHITE, world_border.move(-camera_x, -camera_y), 5)
+
+    # Draw the blocks
+    for block in blocks:
+        pygame.draw.rect(screen, RED, block.move(-camera_x, -camera_y))
+
+    # Draw player
     angle = get_angle_to_mouse(player_pos)
-    pygame.draw.circle(screen, GREEN, player_pos, player_radius)
+    pygame.draw.circle(screen, GREEN, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), player_radius)
     stick_length = 50
-    end_x = player_pos[0] + stick_length * math.cos(math.radians(angle))
-    end_y = player_pos[1] + stick_length * math.sin(math.radians(angle))
-    pygame.draw.line(screen, GREEN, player_pos, (end_x, end_y), 3)
+    end_x = SCREEN_WIDTH // 2 + stick_length * math.cos(math.radians(angle))
+    end_y = SCREEN_HEIGHT // 2 + stick_length * math.sin(math.radians(angle))
+    pygame.draw.line(screen, GREEN, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), (end_x, end_y), 3)
 
     pygame.display.flip()
     clock.tick(60)
