@@ -1,33 +1,47 @@
-# test.py
-# aufgabe: einfach n labyrinth mit einer möglichen lösung generieren lassen
+# map.py
 
 import pygame
 import math
-import importlib
 
-# Initialize pygame
-pygame.init()
-
-# Screen settings
-SCREEN_WIDTH, SCREEN_HEIGHT = 800, 600
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption("Pygame Game")
+# Map settings
+MAP_WIDTH, MAP_HEIGHT = 800, 600
+BLOCK_SIZE = 50
 
 # Colors
 BLACK = (0, 0, 0)
-GREEN = (0, 255, 0)
 WHITE = (255, 255, 255)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
 
 # Player settings
 player_speed = 5
 slow_speed_factor = 0.5
 player_radius = 10
 
-# Clock
-clock = pygame.time.Clock()
+# Initialize pygame
+pygame.init()
+
+# Screen settings
+screen = pygame.display.set_mode((MAP_WIDTH, MAP_HEIGHT))
+pygame.display.set_caption("Labyrinth")
+
+# Define the world border
+world_border = pygame.Rect(0, 0, MAP_WIDTH, MAP_HEIGHT)
+
+# Define a few blocks
+blocks = [
+    pygame.Rect(200, 150, BLOCK_SIZE, BLOCK_SIZE),
+]
+
+# Define the spawn point
+spawn_point = (MAP_WIDTH // 2, MAP_HEIGHT // 2)
+player_pos = list(spawn_point)
 
 # List to track the order of pressed keys
 key_order = []
+
+# Clock
+clock = pygame.time.Clock()
 
 # Function to get angle to the mouse position
 def get_angle_to_mouse(player_pos):
@@ -35,14 +49,6 @@ def get_angle_to_mouse(player_pos):
     dx = mouse_x - player_pos[0]
     dy = mouse_y - player_pos[1]
     return math.degrees(math.atan2(dy, dx))
-
-# Select map
-map_name = input("Enter the map name (without .py extension): ")
-map_module = importlib.import_module(map_name)
-
-# Use the spawn point from the selected map
-player_pos = list(map_module.spawn_point)
-blocks = map_module.blocks
 
 # Function to check for collisions
 def check_collision(new_pos):
@@ -52,11 +58,9 @@ def check_collision(new_pos):
             return True
     return False
 
-# Main game loop
+# Main loop
 running = True
 while running:
-    screen.fill(BLACK)
-
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -102,8 +106,14 @@ while running:
     if not check_collision(new_pos):
         player_pos = new_pos
 
-    player_pos[0] = max(player_radius, min(SCREEN_WIDTH - player_radius, player_pos[0]))
-    player_pos[1] = max(player_radius, min(SCREEN_HEIGHT - player_radius, player_pos[1]))
+    player_pos[0] = max(player_radius, min(MAP_WIDTH - player_radius, player_pos[0]))
+    player_pos[1] = max(player_radius, min(MAP_HEIGHT - player_radius, player_pos[1]))
+
+    screen.fill(BLACK)
+    pygame.draw.rect(screen, WHITE, world_border, 5)
+
+    for block in blocks:
+        pygame.draw.rect(screen, RED, block)
 
     angle = get_angle_to_mouse(player_pos)
     pygame.draw.circle(screen, GREEN, player_pos, player_radius)

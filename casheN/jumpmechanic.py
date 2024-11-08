@@ -1,4 +1,3 @@
-ˋˋˋpython
 import pygame
 
 # Initialize pygame
@@ -100,4 +99,3 @@ while running:
 
 # Quit pygame
 pygame.quit()
-ˋˋˋ

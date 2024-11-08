@@ -93,8 +93,8 @@ while running:
     player_pos[1] += dy
 
     # Keep the player within the screen bounds
-    player_pos[0] = max(player_radius, min(SCREEN_WIDTH - player_radius, player_pos[0]))
-    player_pos[1] = max(player_radius, min(SCREEN_HEIGHT - player_radius, player_pos[1]))
+#    player_pos[0] = max(player_radius, min(SCREEN_WIDTH - player_radius, player_pos[0]))
+#    player_pos[1] = max(player_radius, min(SCREEN_HEIGHT - player_radius, player_pos[1]))
 
     # Draw player
     angle = get_angle_to_mouse(player_pos)  # Get angle to the mouse position
