@@ -1,258 +1,177 @@
 # Roadmap für die Entwicklung eines Tower Defense Spiels in Python (mit Mobile App Option)
 
-Roadmap wurde mit Google Gemini Advanced erstellt. Die Haken sollen in folgender Reihenfolge gesetzt werden: Til, Cassian, Paul
+Dieses Dokument beschreibt die Schritte zur Erstellung eines Tower Defense Spiels in Python mit Pygame, inklusive der Möglichkeit, es als mobile App zu veröffentlichen. Die Aufgaben sind auf drei Entwickler (Til, Cassian und Paul) aufgeteilt und auf einen Zeitraum von 3 Wochen bis zum ersten Release ausgelegt.
 
-Dieses Dokument beschreibt die Schritte zur Erstellung eines Tower Defense Spiels in Python mit Pygame, inklusive der Möglichkeit, es als mobile App zu veröffentlichen. 
-
-## Phase 1: Vorbereitung und Grundlagen
+## Woche 1: Vorbereitung, Grundlagen & Design (Til, Cassian, Paul)
 
 * **Pygame installieren:**
     * `pip install pygame`  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Dokumentation lesen: [https://www.pygame.org/docs/](https://www.pygame.org/docs/)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
 * **Grundlagen erlernen:**
     * Fenster erstellen und verwalten  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Bilder laden und anzeigen  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    * Benutzereingaben verarbeiten (Maus, Tastatur, Touch)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
+    * Benutzereingaben verarbeiten (Maus, Tastatur)  
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Spielschleife implementieren  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Einfache Formen und Farben zeichnen  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
 * **Konzept und Design:**
     * Spielfeld entwerfen (Layout, Wegfindung)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Türme und Gegnertypen definieren (Attribute, Fähigkeiten)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Spielmechaniken festlegen (Wellen, Upgrades, Ressourcen)  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    * Benutzeroberfläche planen (Menüs, Anzeigen, Touch-Steuerung)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
+    * Benutzeroberfläche planen (Menüs, Anzeigen)  
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
 
-
-## Phase 2: Spielobjekte und Logik
+## Woche 2: Spielobjekte, Logik & Balancing (Til, Cassian, Paul)
 
 * **Klassen erstellen:**
     * `Turm` (Position, Reichweite, Schaden, Angriffsgeschwindigkeit, Upgrade-Möglichkeiten)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * `Gegner` (Gesundheit, Geschwindigkeit, Wegfindung, Belohnung)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * `Projektil` (Schaden, Geschwindigkeit, Flugbahn)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
 * **Wegfindung implementieren:**
     * Algorithmus wählen (z.B. A*)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Wegfindungsdaten für das Spielfeld erstellen  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Gegner entlang des Weges bewegen  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
 * **Kollisionserkennung:**
     * Türme mit Gegnern  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Projektile mit Gegnern  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
 * **Spiellogik:**
     * Wellen von Gegnern spawnen  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Türme platzieren und upgraden  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Ressourcen verwalten (Geld, Leben)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Spielende-Bedingungen (Sieg, Niederlage)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
+* **Balancing:**
+    * Schwierigkeitsgrad der Wellen anpassen (Anzahl, Typ, Stärke der Gegner)  
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
+    * Turm-Attribute und Upgrade-Kosten balancieren  
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
+    * Spiel testen und Balancing iterativ anpassen  
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
 
 
-## Phase 3: Grafik und Sound
+## Woche 3: Grafik, Sound & Veröffentlichung (Til, Cassian, Paul)
 
 * **Texturen erstellen:**
     * Grafikprogramm verwenden (z.B. GIMP, Photoshop)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Sprites für Türme, Gegner, Projektile, Hintergrund erstellen  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    * Animationen erstellen (optional)  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    * Optimierung für verschiedene Auflösungen (Mobile)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
 * **Soundeffekte und Musik:**
     * Sounds und Musik finden oder erstellen  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Mit Pygame einbinden und abspielen  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
 * **Benutzeroberfläche gestalten:**
     * Menüs (Start, Optionen, Spielende)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Anzeigen (Leben, Geld, Wellen)  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
     * Schaltflächen (Turm-Auswahl, Upgrade)  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    * Touch-Steuerung implementieren  
-       - [ ] 
-       - [ ] 
-       - [ ]
-
-
-## Phase 4: Mobile App Entwicklung
-
-* **Framework auswählen:**
-    * Kivy: Cross-Plattform Framework für die Entwicklung von Touch-Anwendungen.  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    * BeeWare:  Ermöglicht die Erstellung nativer Apps für iOS, Android und Desktop.  
-       - [ ] 
-       - [ ] 
-       - [ ]
-* **Pygame Integration:**
-    *  Anpassungen am Code vornehmen, um Pygame mit dem gewählten Framework zu integrieren.  
-       - [ ] 
-       - [ ] 
-       - [ ]
-* **Touch-Steuerung:**
-    *  Maus-Events in Touch-Events umwandeln.  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    *  Gesten implementieren (z.B. Pinch-to-Zoom).  
-       - [ ] 
-       - [ ] 
-       - [ ]
-* **UI Anpassungen:**
-    * Benutzeroberfläche an mobile Geräte anpassen (Größe, Layout).  
-       - [ ] 
-       - [ ] 
-       - [ ]
-* **Build-Prozess:**
-    *  Build-Tools des Frameworks verwenden, um die App für Android und/oder iOS zu erstellen.  
-       - [ ] 
-       - [ ] 
-       - [ ]
-
-
-## Phase 5: Testen und Verbessern
-
-* **Spiel testen:**
-    *  Auf Fehlern überprüfen (Bugs, Balancing)  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    *  Spielspaß und Schwierigkeitsgrad bewerten  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    *  Feedback einholen (auf verschiedenen Geräten)  
-       - [ ] 
-       - [ ] 
-       - [ ]
-* **Code optimieren:**
-    *  Performance verbessern (besonders wichtig für mobile Geräte)  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    *  Code lesbarer und wartbarer gestalten  
-       - [ ] 
-       - [ ] 
-       - [ ]
-* **Zusätzliche Features:**
-    *  Schwierigkeitsgrade  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    *  Verschiedene Spielmodi  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    *  Highscore-Liste  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    *  Speichern und Laden  
-       - [ ] 
-       - [ ] 
-       - [ ]
-
-
-## Phase 6: Veröffentlichung (optional)
-
-* **Spiel veröffentlichen:**
-    *  Plattform wählen (z.B. Google Play Store, Apple App Store, itch.io)  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    *  Spiel verpacken und hochladen  
-       - [ ] 
-       - [ ] 
-       - [ ]
-    *  Spiel bewerben  
-       - [ ] 
-       - [ ] 
-       - [ ]
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
+* **Testen und Bugfixing:**
+    * Gründliches Testen des Spiels auf Funktionalität und Bugs  
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
+    * Fehler beheben und Spiel optimieren  
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
+* **Veröffentlichung (optional):**
+    * Plattform wählen (z.B. itch.io)  
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
+    * Spiel verpacken und hochladen  
+       - [ ] Til
+       - [ ] Cassian
+       - [ ] Paul
 
 
 ## Ressourcen
@@ -261,13 +180,19 @@ Dieses Dokument beschreibt die Schritte zur Erstellung eines Tower Defense Spiel
 * **Pygame Tutorials:** [https://www.youtube.com/results?search_query=pygame+tutorial](https://www.youtube.com/results?search_query=pygame+tutorial)
 * **Grafikprogramme:** GIMP (kostenlos), Photoshop (kommerziell)
 * **Soundeffekte und Musik:** [https://freesound.org/](https://freesound.org/)
-* **Kivy:** [https://kivy.org/#home](https://kivy.org/#home)
-* **BeeWare:** [https://beeware.org/](https://beeware.org/)
+
 
 ## Tipps
 
-* **Objektorientierte Programmierung:** Klassen und Objekte verwenden, um den Code zu strukturieren.
-* **Kommentare:** Den Code kommentieren, um ihn verständlicher zu machen.
-* **Versionierung:** Git verwenden, um den Code zu versionieren.
+* **Kommunikation:**  Regelmäßige Kommunikation und Abstimmung zwischen den Entwicklern ist wichtig.
+* **Versionierung:** Git verwenden, um den Code zu versionieren und gemeinsam daran zu arbeiten.
 * **Kleine Schritte:** Das Spiel in kleinen Schritten entwickeln und testen.
 * **Spaß haben!**
+
+
+**Zusätzliche Hinweise:**
+
+* Dieser Zeitplan ist ambitioniert und erfordert effizientes Arbeiten.
+* Die Aufgabenverteilung kann je nach den Fähigkeiten und Vorlieben der Entwickler angepasst werden.
+* Die Mobile App Entwicklung ist in diesem Zeitplan nicht berücksichtigt und würde zusätzliche Zeit erfordern.
+*  Priorität liegt auf einem funktionierenden und spielbaren Spiel zum ersten Release. Zusätzliche Features können später hinzugefügt werden.
