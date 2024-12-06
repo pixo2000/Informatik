@@ -1,0 +1,1927 @@
+INFO:logging_functions:Logging started
+INFO:logging_functions:Creating game area with height: 10, width: 5
+INFO:logging_functions:Writing symbol X to coordinates x: 3, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Game finished
+INFO:logging_functions:Logging started
+INFO:logging_functions:Creating game area with height: 10, width: 5
+INFO:logging_functions:Writing symbol X to coordinates x: 3, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Game finished
+INFO:logging_functions:Logging started
+INFO:logging_functions:Creating game area with height: 10, width: 5
+INFO:logging_functions:Logging started
+INFO:logging_functions:Creating game area with height: 10, width: 5
+INFO:logging_functions:Writing symbol X to coordinates x: 3, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Game finished
+INFO:logging_functions:Logging started
+INFO:logging_functions:Creating game area with height: 10, width: 5
+INFO:logging_functions:Writing symbol X to coordinates x: 3, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Game finished
+INFO:logging_functions:Logging started
+INFO:logging_functions:Creating game area with height: 10, width: 5
+INFO:logging_functions:Writing symbol X to coordinates x: 3, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 3, y: 2
+INFO:logging_functions:Writing symbol   to coordinates x: 3, y: 3
+INFO:logging_functions:Writing symbol X to coordinates x: 3, y: 2
+INFO:logging_functions:Game finished
+INFO:logging_functions:Logging started
+INFO:logging_functions:Creating game area with height: 10, width: 5
+INFO:logging_functions:Writing symbol X to coordinates x: 3, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 3, y: 2
+INFO:logging_functions:Writing symbol   to coordinates x: 3, y: 3
+INFO:logging_functions:Writing symbol X to coordinates x: 3, y: 2
+INFO:logging_functions:Printing game
+INFO:logging_functions:Game finished
+INFO:logging_functions:Logging started
+INFO:logging_functions:Creating game area with height: 10, width: 5
+INFO:logging_functions:Writing symbol X to coordinates x: 3, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 3, y: 2
+INFO:logging_functions:Writing symbol 0 to coordinates x: 3, y: 3
+INFO:logging_functions:Writing symbol X to coordinates x: 3, y: 2
+INFO:logging_functions:Printing game
+INFO:logging_functions:Game finished
+INFO:logging_functions:Logging started
+INFO:logging_functions:Creating game area with height: 10, width: 5
+INFO:logging_functions:Writing symbol X to coordinates x: 3, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Logging started
+INFO:logging_functions:Creating game area with height: 10, width: 5
+INFO:logging_functions:Writing symbol X to coordinates x: 3, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Starting control loop
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 4, y: 3
+INFO:logging_functions:Writing symbol 0 to coordinates x: 3, y: 3
+INFO:logging_functions:Writing symbol X to coordinates x: 4, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 3, y: 3
+INFO:logging_functions:Writing symbol 0 to coordinates x: 4, y: 3
+INFO:logging_functions:Writing symbol X to coordinates x: 3, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 2, y: 3
+INFO:logging_functions:Writing symbol 0 to coordinates x: 3, y: 3
+INFO:logging_functions:Writing symbol X to coordinates x: 2, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 1, y: 3
+INFO:logging_functions:Writing symbol 0 to coordinates x: 2, y: 3
+INFO:logging_functions:Writing symbol X to coordinates x: 1, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 0, y: 3
+INFO:logging_functions:Writing symbol 0 to coordinates x: 1, y: 3
+INFO:logging_functions:Writing symbol X to coordinates x: 0, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction left
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (-1, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 0, y: 2
+INFO:logging_functions:Writing symbol 0 to coordinates x: 0, y: 3
+INFO:logging_functions:Writing symbol X to coordinates x: 0, y: 2
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 0, y: 1
+INFO:logging_functions:Writing symbol 0 to coordinates x: 0, y: 2
+INFO:logging_functions:Writing symbol X to coordinates x: 0, y: 1
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 0, y: 0
+INFO:logging_functions:Writing symbol 0 to coordinates x: 0, y: 1
+INFO:logging_functions:Writing symbol X to coordinates x: 0, y: 0
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction up
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, -1)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 0, y: 1
+INFO:logging_functions:Writing symbol 0 to coordinates x: 0, y: 0
+INFO:logging_functions:Writing symbol X to coordinates x: 0, y: 1
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 0, y: 2
+INFO:logging_functions:Writing symbol 0 to coordinates x: 0, y: 1
+INFO:logging_functions:Writing symbol X to coordinates x: 0, y: 2
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 0, y: 3
+INFO:logging_functions:Writing symbol 0 to coordinates x: 0, y: 2
+INFO:logging_functions:Writing symbol X to coordinates x: 0, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 0, y: 4
+INFO:logging_functions:Writing symbol 0 to coordinates x: 0, y: 3
+INFO:logging_functions:Writing symbol X to coordinates x: 0, y: 4
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 0, y: 5
+INFO:logging_functions:Writing symbol 0 to coordinates x: 0, y: 4
+INFO:logging_functions:Writing symbol X to coordinates x: 0, y: 5
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 0, y: 6
+INFO:logging_functions:Writing symbol 0 to coordinates x: 0, y: 5
+INFO:logging_functions:Writing symbol X to coordinates x: 0, y: 6
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 0, y: 7
+INFO:logging_functions:Writing symbol 0 to coordinates x: 0, y: 6
+INFO:logging_functions:Writing symbol X to coordinates x: 0, y: 7
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 0, y: 8
+INFO:logging_functions:Writing symbol 0 to coordinates x: 0, y: 7
+INFO:logging_functions:Writing symbol X to coordinates x: 0, y: 8
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 0, y: 9
+INFO:logging_functions:Writing symbol 0 to coordinates x: 0, y: 8
+INFO:logging_functions:Writing symbol X to coordinates x: 0, y: 9
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (0, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Game finished
+INFO:logging_functions:Logging started
+INFO:logging_functions:Creating game area with height: 10, width: 5
+INFO:logging_functions:Writing symbol X to coordinates x: 3, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Starting control loop
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 4, y: 3
+INFO:logging_functions:Writing symbol 0 to coordinates x: 3, y: 3
+INFO:logging_functions:Writing symbol X to coordinates x: 4, y: 3
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction right
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (5, 3)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 4, y: 4
+INFO:logging_functions:Writing symbol 0 to coordinates x: 4, y: 3
+INFO:logging_functions:Writing symbol X to coordinates x: 4, y: 4
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 4, y: 5
+INFO:logging_functions:Writing symbol 0 to coordinates x: 4, y: 4
+INFO:logging_functions:Writing symbol X to coordinates x: 4, y: 5
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 4, y: 6
+INFO:logging_functions:Writing symbol 0 to coordinates x: 4, y: 5
+INFO:logging_functions:Writing symbol X to coordinates x: 4, y: 6
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 4, y: 7
+INFO:logging_functions:Writing symbol 0 to coordinates x: 4, y: 6
+INFO:logging_functions:Writing symbol X to coordinates x: 4, y: 7
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 4, y: 8
+INFO:logging_functions:Writing symbol 0 to coordinates x: 4, y: 7
+INFO:logging_functions:Writing symbol X to coordinates x: 4, y: 8
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+INFO:logging_functions:Reading coordinates x: 4, y: 9
+INFO:logging_functions:Writing symbol 0 to coordinates x: 4, y: 8
+INFO:logging_functions:Writing symbol X to coordinates x: 4, y: 9
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Moving player in direction down
+INFO:logging_functions:Checking player coordinates
+ERROR:logging_functions:Invalid coordinates (4, 10)
+INFO:logging_functions:Printing game
+INFO:logging_functions:Game finished
