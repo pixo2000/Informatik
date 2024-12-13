@@ -13,3 +13,8 @@ später pygame grafik und sounds
 
 
 movement mit keyboard
+
+
+
+sachen generieren in game logic
+dann logic mit counter if player going on ore
