@@ -5,7 +5,7 @@ import time
 from PIL import Image  # Package name is Pillow!!!
 from game import start_game  # Import the start_game function
 import socket
-# disable gui while ingame(maybe with variable from game.py that you check here.
+# disable gui while ingame(maybe with variable from Spielfeld.py that you check here.
 # error: crash on start button when server online
 
 class App(customtkinter.CTk):
@@ -116,7 +116,7 @@ class App(customtkinter.CTk):
         print("Offline checkbox toggled")
 
     def start_game_1(self):
-        start_game()  # Call the start_game function from game.py
+        start_game()  # Call the start_game function from Spielfeld.py
 
     def disable_buttons(self):
         for widget in self.winfo_children():

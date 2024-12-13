@@ -1,20 +1,23 @@
-import game
-import logging_functions as logger
-from logging_functions import log
+import Spielfeld
+import Spielfigur
 
 
 def run_game():
-    # set startcoords here
-    startcoords = (3, 3)
-    runningGame = game.create_game_area(10, 5)
-    runningGame = game.write_coords(runningGame, startcoords[0], startcoords[1], "X")
-    game.print_game(runningGame)
-    game.control(runningGame)
+    x = 0
+    y = 0
+
+    mySpielfeld = Spielfeld.erzeuge(10, 10)
+    mySpielfeld = Spielfeld.schreibe(mySpielfeld, x, y, "X")
+    Spielfeld.ausgabe(mySpielfeld)
+
+    while True:
+        (mySpielfeld, x, y) = Spielfigur.bewege(mySpielfeld, x, y)
+        Spielfeld.ausgabe(mySpielfeld)
+
 
 def main():
-    logger.start_logging("DEBUG")
     run_game()
-    log.info("Game finished")
+
 
 if __name__ == '__main__':
     main()

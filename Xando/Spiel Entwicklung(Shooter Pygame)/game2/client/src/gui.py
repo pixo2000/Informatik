@@ -41,7 +41,7 @@ def create_gui(start_game_func):
                                      "Unable to connect to the server. Please make sure the server is running.")
                 return
 
-            start_game_func(selected_map.get())  # Call the start_game function from game.py
+            start_game_func(selected_map.get())  # Call the start_game function from Spielfeld.py
             start_button.pack_forget()  # Remove the start button
             app.game_running = True  # Set the game running flag to True
 
