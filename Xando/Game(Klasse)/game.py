@@ -30,3 +30,12 @@ def write_coords(game, x, y, symbol):
     result[y] = line[:x] + symbol + line[x + 1:]
 
     return result
+
+def check_player_coords(game):
+    log.info("Checking player coordinates")
+    for y, line in enumerate(game):
+        for x, symbol in enumerate(line):
+            if symbol == "X":
+                return (x, y)
+
+    return None
