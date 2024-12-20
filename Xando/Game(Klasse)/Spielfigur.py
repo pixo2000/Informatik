@@ -1,25 +1,23 @@
+import pygame
+
 import Spielfeld
 
-def erfrageBewegung(x, y):
-    bewegungsWunsch = input("Richtung: ")
-
-    if bewegungsWunsch == "W":
+def erfrage(event, x, y):
+    if event.key == pygame.K_w:
         y = y - 1
-
-    if bewegungsWunsch == "S":
+    elif event.key == pygame.K_s:
         y = y + 1
-
-    if bewegungsWunsch == "A":
+    elif event.key == pygame.K_a:
         x = x - 1
-
-    if bewegungsWunsch == "D":
+    elif event.key == pygame.K_d:
         x = x + 1
 
     return x, y
 
-def bewege(mySpielfeld, x, y):
+def bewege(mySpielfeld, x, y, event):
     mySpielfeld = Spielfeld.schreibe(mySpielfeld, x, y, "0")
-    (x, y) = erfrageBewegung(x, y)
+    (x, y) = erfrage(event, x, y)
     mySpielfeld = Spielfeld.schreibe(mySpielfeld, x, y, "X")
+    Spielfeld.ausgabe(mySpielfeld)
 
     return mySpielfeld, x, y
