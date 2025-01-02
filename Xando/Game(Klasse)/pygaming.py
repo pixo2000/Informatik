@@ -4,13 +4,15 @@ import Spielfigur
 from Gegenstaende import platziere_gold, platziere_silber, platziere_platin
 
 # Constants
-WINDOW_SIZE = (800, 800)
+WINDOW_SIZE = (800, 800) # calc window size by multiplying CELL_SIZE with the number of cells
 CELL_SIZE = 80
 GRID_COLOR = (200, 200, 200)
 PLAYER_COLOR = (255, 0, 0)
-GOLD_COLOR = (255, 215, 0)
 SILVER_COLOR = (192, 192, 192)
 PLATIN_COLOR = (229, 228, 226)
+
+# Load textures
+GOLD_TEXTURE = pygame.image.load('texture/gold.jpg')
 
 def draw_grid(screen, spielfeld):
     for y, row in enumerate(spielfeld):
@@ -20,7 +22,8 @@ def draw_grid(screen, spielfeld):
             if cell == 'X':
                 pygame.draw.circle(screen, PLAYER_COLOR, rect.center, CELL_SIZE // 3)
             elif cell == 'G':
-                pygame.draw.circle(screen, GOLD_COLOR, rect.center, CELL_SIZE // 3)
+                gold_rect = GOLD_TEXTURE.get_rect(center=rect.center)
+                screen.blit(GOLD_TEXTURE, gold_rect)
             elif cell == 'S':
                 pygame.draw.circle(screen, SILVER_COLOR, rect.center, CELL_SIZE // 3)
             elif cell == 'P':
