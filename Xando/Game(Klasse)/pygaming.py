@@ -11,8 +11,12 @@ SILVER_COLOR = (192, 192, 192)
 PLATIN_COLOR = (229, 228, 226)
 
 # Load and resize textures
-GOLD_TEXTURE = pygame.image.load('texture/gold.png')
+GOLD_TEXTURE = pygame.image.load('texture/ore/gold.png')
 GOLD_TEXTURE = pygame.transform.scale(GOLD_TEXTURE, (CELL_SIZE, CELL_SIZE))
+SILVER_TEXTURE = pygame.image.load('texture/ore/silver.png')
+SILVER_TEXTURE = pygame.transform.scale(SILVER_TEXTURE, (CELL_SIZE, CELL_SIZE))
+PLATINUM_TEXTURE = pygame.image.load('texture/ore/platinum.png')
+PLATINUM_TEXTURE = pygame.transform.scale(PLATINUM_TEXTURE, (CELL_SIZE, CELL_SIZE))
 
 
 def draw_grid(screen, spielfeld):
@@ -26,9 +30,11 @@ def draw_grid(screen, spielfeld):
                 gold_rect = GOLD_TEXTURE.get_rect(center=rect.center)
                 screen.blit(GOLD_TEXTURE, gold_rect)
             elif cell == 'S':
-                pygame.draw.circle(screen, SILVER_COLOR, rect.center, CELL_SIZE // 3)
+                silver_rect = SILVER_TEXTURE.get_rect(center=rect.center)
+                screen.blit(SILVER_TEXTURE, silver_rect)
             elif cell == 'P':
-                pygame.draw.circle(screen, PLATIN_COLOR, rect.center, CELL_SIZE // 3)
+                platinum_rect = PLATINUM_TEXTURE.get_rect(center=rect.center)
+                screen.blit(PLATINUM_TEXTURE, platinum_rect)
 
 
 def run_pygame():
