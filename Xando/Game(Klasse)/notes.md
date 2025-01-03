@@ -17,3 +17,7 @@ pygame bessa verstehen
 replace main
 
 neue branch für zwischenstand der klasse mit originaldateien aus moodle
+
+spielstand speichern
+hintergrundtexturen
+player textur
