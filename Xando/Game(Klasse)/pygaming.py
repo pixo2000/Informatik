@@ -18,6 +18,8 @@ SILVER_TEXTURE = pygame.transform.scale(SILVER_TEXTURE, (CELL_SIZE, CELL_SIZE))
 PLATINUM_TEXTURE = pygame.image.load('texture/ore/platinum.png')
 PLATINUM_TEXTURE = pygame.transform.scale(PLATINUM_TEXTURE, (CELL_SIZE, CELL_SIZE))
 
+# Load background image
+BACKGROUND_IMAGE = pygame.image.load('texture/background.jpeg')
 
 def draw_grid(screen, spielfeld):
     for y, row in enumerate(spielfeld):
@@ -35,7 +37,6 @@ def draw_grid(screen, spielfeld):
             elif cell == 'P':
                 platinum_rect = PLATINUM_TEXTURE.get_rect(center=rect.center)
                 screen.blit(PLATINUM_TEXTURE, platinum_rect)
-
 
 def run_pygame():
     pygame.init()
@@ -66,13 +67,12 @@ def run_pygame():
             elif event.type == pygame.KEYDOWN:
                 mySpielfeld, x, y = Spielfigur.bewege(mySpielfeld, x, y, event)
 
-        screen.fill((0, 0, 0))
+        screen.blit(BACKGROUND_IMAGE, (0, 0))
         draw_grid(screen, mySpielfeld)
         pygame.display.flip()
         clock.tick(30)
 
     pygame.quit()
-
 
 if __name__ == '__main__':
     run_pygame()
