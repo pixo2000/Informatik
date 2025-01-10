@@ -10,7 +10,7 @@ dann logic mit counter if player going on ore
 
 
 
--> einfach ausgabe prints entfernen um console zu leeren
+
 pygame bessa verstehen
 
 replace main
