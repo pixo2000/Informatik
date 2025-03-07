@@ -1,0 +1,1 @@
+- fix headings, color and formating via Stylesheet of casheN
