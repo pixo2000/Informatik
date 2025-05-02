@@ -1,0 +1,24 @@
+{
+    "vorname": "Paul",
+    "nachname": "Schoeneck",
+    "email": "paul.schoeneck@gmx.de",
+    "datum": "2008-10-24",
+    "farbe": "#000000",
+    "geschlecht": "maennlich",
+    "land": "deutschland",
+    "strasse": "Oranienstraße",
+    "hausnr": "44",
+    "plz": "65527",
+    "ort": "Niedernhausen",
+    "produkt": [
+        "kopfhoerer",
+        "smartwatch"
+    ],
+    "bestellmethode": "lieferung",
+    "nachricht": "test",
+    "zahlungsmethode": "kreditkarte",
+    "kartennummer": "124234",
+    "ablaufdatum": "134",
+    "sicherheitscode": "1324",
+    "karteninhaber": "134"
+}

@@ -1,0 +1,23 @@
+{
+    "vorname": "Paul",
+    "nachname": "Schoeneck",
+    "email": "paul.schoeneck@gmx.de",
+    "datum": "0008-01-24",
+    "farbe": "#000000",
+    "geschlecht": "maennlich",
+    "land": "deutschland",
+    "strasse": "Oranienstraße",
+    "hausnr": "44",
+    "plz": "65527",
+    "ort": "Niedernhausen",
+    "produkt": [
+        "smartphone"
+    ],
+    "bestellmethode": "lieferung",
+    "nachricht": "test",
+    "zahlungsmethode": "kreditkarte",
+    "kartennummer": "132423545",
+    "ablaufdatum": "345",
+    "sicherheitscode": "345",
+    "karteninhaber": "345345345"
+}

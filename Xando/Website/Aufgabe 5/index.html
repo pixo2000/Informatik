@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt Formular</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Message(With API)</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="vorname">Vorname:</label>
+                <input type="text" id="vorname" name="vorname" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="nachname">Nachname:</label>
+                <input type="text" id="nachname" name="nachname" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="datum">Datum:</label>
+                <input type="date" id="datum" name="datum" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="farbe">Farbe:</label>
+                <input type="color" id="farbe" name="farbe">
+            </div>
+            
+            <div class="form-group">
+                <label>Geschlecht:</label>
+                <div class="radio-group">
+                    <input type="radio" id="maennlich" name="geschlecht" value="maennlich">
+                    <label for="maennlich">Männlich</label>
+                    
+                    <input type="radio" id="weiblich" name="geschlecht" value="weiblich">
+                    <label for="weiblich">Weiblich</label>
+                    
+                    <input type="radio" id="divers" name="geschlecht" value="divers">
+                    <label for="divers">Divers</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="land">Land:</label>
+                <select id="land" name="land" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="deutschland">Deutschland</option>
+                    <option value="oesterreich">Österreich</option>
+                    <option value="schweiz">Schweiz</option>
+                    <option value="andere">Andere</option>
+                </select>
+            </div>
+            
+            <div class="form-group address-section">
+                <label>Adresse:</label>
+                <div class="address-row">
+                    <div class="address-field">
+                        <label for="strasse">Straße:</label>
+                        <input type="text" id="strasse" name="strasse" required>
+                    </div>
+                    <div class="address-field haus-nr">
+                        <label for="hausnr">Nr.:</label>
+                        <input type="text" id="hausnr" name="hausnr" required>
+                    </div>
+                </div>
+                <div class="address-row">
+                    <div class="address-field">
+                        <label for="plz">PLZ:</label>
+                        <input type="text" id="plz" name="plz" required>
+                    </div>
+                    <div class="address-field">
+                        <label for="ort">Ort:</label>
+                        <input type="text" id="ort" name="ort" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Produkte:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="smartphone" name="produkt" value="smartphone">
+                        <label for="smartphone">Smartphone</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="laptop" name="produkt" value="laptop">
+                        <label for="laptop">Laptop</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="tablet" name="produkt" value="tablet">
+                        <label for="tablet">Tablet</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="kopfhoerer" name="produkt" value="kopfhoerer">
+                        <label for="kopfhoerer">Kopfhörer</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="smartwatch" name="produkt" value="smartwatch">
+                        <label for="smartwatch">Smartwatch</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Bestellmethode:</label>
+                <div class="radio-group">
+                    <input type="radio" id="lieferung" name="bestellmethode" value="lieferung">
+                    <label for="lieferung">Standard-Lieferung</label>
+                    
+                    <input type="radio" id="express" name="bestellmethode" value="express">
+                    <label for="express">Express-Lieferung</label>
+                    
+                    <input type="radio" id="abholung" name="bestellmethode" value="abholung">
+                    <label for="abholung">Abholung im Geschäft</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="nachricht">Nachricht:</label>
+                <textarea id="nachricht" name="nachricht" rows="4"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Zahlungsmethode:</label>
+                <div class="radio-group">
+                    <input type="radio" id="kreditkarte" name="zahlungsmethode" value="kreditkarte" onchange="toggleCreditCardFields()">
+                    <label for="kreditkarte">Kreditkarte</label>
+                    
+                    <input type="radio" id="paypal" name="zahlungsmethode" value="paypal" onchange="toggleCreditCardFields()">
+                    <label for="paypal">PayPal</label>
+                    
+                    <input type="radio" id="ueberweisung" name="zahlungsmethode" value="ueberweisung" onchange="toggleCreditCardFields()">
+                    <label for="ueberweisung">Überweisung</label>
+                    
+                    <input type="radio" id="rechnung" name="zahlungsmethode" value="rechnung" onchange="toggleCreditCardFields()">
+                    <label for="rechnung">Rechnung</label>
+                </div>
+            </div>
+            
+            <div id="creditCardFields" style="display: none;">
+                <div class="form-group">
+                    <label for="kartennummer">Kartennummer:</label>
+                    <input type="text" id="kartennummer" name="kartennummer" placeholder="1234 5678 9012 3456">
+                </div>
+                
+                <div class="address-row">
+                    <div class="address-field">
+                        <label for="ablaufdatum">Ablaufdatum:</label>
+                        <input type="text" id="ablaufdatum" name="ablaufdatum" placeholder="MM/JJ">
+                    </div>
+                    <div class="address-field">
+                        <label for="sicherheitscode">Sicherheitscode:</label>
+                        <input type="text" id="sicherheitscode" name="sicherheitscode" placeholder="123">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="karteninhaber">Karteninhaber:</label>
+                    <input type="text" id="karteninhaber" name="karteninhaber">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Absenden</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function toggleCreditCardFields() {
+            var creditCardFields = document.getElementById('creditCardFields');
+            var kreditkarte = document.getElementById('kreditkarte');
+            
+            if (kreditkarte.checked) {
+                creditCardFields.style.display = 'block';
+            } else {
+                creditCardFields.style.display = 'none';
+            }
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const formDataObj = {};
+            
+            // Convert FormData to object
+            formData.forEach((value, key) => {
+                // Handle checkboxes (multiple values)
+                if (key === 'produkt') {
+                    if (!formDataObj[key]) {
+                        formDataObj[key] = [];
+                    }
+                    formDataObj[key].push(value);
+                } else {
+                    formDataObj[key] = value;
+                }
+            });
+            
+            // Send data to the server
+            fetch('http://localhost:5000/api/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formDataObj)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Vielen Dank für Ihre Anfrage! Eine Bestätigungsmail wurde an Ihre E-Mail-Adresse gesendet.');
+                    document.getElementById('loginForm').reset();
+                } else {
+                    alert('Ein Fehler ist aufgetreten: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.');
+            });
+        });
+    </script>
+</body>
+</html>
