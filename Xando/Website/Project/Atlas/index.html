@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas - Data Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Authentication Modal - add style="display:none" -->
+    <div id="auth-modal" class="modal" style="display:none">
+        <div class="modal-content">
+            <h2>Authentication Required</h2>
+            <p>Enter your ATLAS key to access the database:</p>
+            <input type="password" id="atlas-key" placeholder="Enter access key...">
+            <button id="auth-submit">Submit</button>
+            <p id="auth-error" class="error"></p>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>ATLAS</h1>
+            <p class="subtitle">Information Repository</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button">Search</button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Recent</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Upload</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section class="entries-list">
+                <h2>Latest Entries</h2>
+                <div id="entries-container">
+                    <!-- Entries will be loaded here via API -->
+                    <div class="entry-loading">Loading data...</div>
+                </div>
+            </section>
+
+            <section class="entry-view hidden">
+                <div class="entry-header">
+                    <h2 id="entry-title">Person Name</h2>
+                    <div class="entry-meta">
+                        <span id="entry-date">Phone</span> |
+                        <span id="entry-author">Email</span>
+                    </div>
+                </div>
+                <div id="entry-content" class="entry-content">
+                    <!-- Entry content will be loaded here -->
+                </div>
+                <div class="entry-actions">
+                    <button id="edit-entry" class="action-button">Edit</button>
+                    <button id="delete-entry" class="action-button delete">Delete</button>
+                    <button id="back-button">Back to List</button>
+                </div>
+            </section>
+
+            <section id="upload-section" class="hidden">
+                <h2>Create New Contact</h2>
+                <form id="entry-form">
+                    <div class="form-group">
+                        <label for="entry-form-title">Name:</label>
+                        <input type="text" id="entry-form-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="entry-form-author">Email:</label>
+                        <input type="email" id="entry-form-author">
+                    </div>
+                    <div class="form-group">
+                        <label for="entry-form-content">Notes:</label>
+                        <textarea id="entry-form-content" rows="15"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="save-entry">Save Contact</button>
+                        <button type="button" id="cancel-entry">Cancel</button>
+                    </div>
+                    <div id="form-message"></div>
+                </form>
+            </section>
+
+            <section id="edit-section" class="hidden">
+                <h2>Edit Contact</h2>
+                <form id="edit-form">
+                    <input type="hidden" id="edit-form-id">
+                    <div class="form-group">
+                        <label for="edit-form-title">Name:</label>
+                        <input type="text" id="edit-form-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-form-author">Email:</label>
+                        <input type="email" id="edit-form-author">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-form-content">Notes:</label>
+                        <textarea id="edit-form-content" rows="15"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="update-entry">Update Contact</button>
+                        <button type="button" id="cancel-edit">Cancel</button>
+                    </div>
+                    <div id="edit-form-message"></div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Atlas Database | <span id="stats">0 entries in database</span> | <a href="#" id="logout-link">Logout</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Debug Helper Comment -->
+    <!-- Press Ctrl+Shift+D to access debug tools in console -->
+    <!-- Press F12 to open developer tools and see API calls -->
+</body>
+</html>
