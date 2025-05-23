@@ -1,0 +1,199 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Kunterbunt - Login</title>
+    <style>
+        .login-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .login-form input {
+            margin-bottom: 15px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .login-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+        }
+        
+        .login-remember {
+            display: flex;
+            align-items: center;
+        }
+        
+        .login-remember input {
+            margin: 0 8px 0 0;
+        }
+        
+        .login-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .login-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .login-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .login-type {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .login-type button {
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .login-type button.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Kunterbunt</h1>
+            <p>Kinderbetreuung nach der Schule</p>
+        </div>
+        <nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="geschichte.html">Geschichte</a></li>
+                <li><a href="programm.html">Programm + Betreuerteam</a></li>
+                <li><a href="betreuungseinheiten.html">Betreuungseinheiten</a></li>
+                <li><a href="angebote.html">Angebotsumfang</a></li>
+                <li><a href="mittagessen.html">Mittagessen</a></li>
+                <li><a href="preisliste.html">Preisliste</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="aktuelles.html">Aktuelles</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li class="account-btn"><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login" class="section">
+            <div class="container">
+                <h2>Login-Bereich</h2>
+                <p>Bitte melden Sie sich mit Ihren Zugangsdaten an.</p>
+                
+                <div class="login-container">
+                    <div class="login-type">
+                        <button class="active" id="parent-login">Eltern-Login</button>
+                        <button id="staff-login">Mitarbeiter-Login</button>
+                    </div>
+                    
+                    <form class="login-form">
+                        <input type="email" placeholder="E-Mail" required>
+                        <input type="password" placeholder="Passwort" required>
+                        
+                        <div class="login-options">
+                            <div class="login-remember">
+                                <input type="checkbox" id="remember-me">
+                                <label for="remember-me">Angemeldet bleiben</label>
+                            </div>
+                            <a href="#" class="forgot-password">Passwort vergessen?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn primary">Anmelden</button>
+                    </form>
+                    
+                    <div class="login-links">
+                        <p>Noch kein Konto? <a href="#">Jetzt registrieren</a></p>
+                        <p>Bei Fragen kontaktieren Sie bitte unseren <a href="kontakt.html">Support</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Kunterbunt</h3>
+                    <p>Kinderbetreuung nach der Schule</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Schnellzugriff</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontakt</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Musterstraße 123, 12345 Musterstadt</p>
+                    <p><i class="fas fa-phone"></i> +49 123 4567890</p>
+                    <p><i class="fas fa-envelope"></i> info@kunterbunt.de</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Kunterbunt. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple login-type toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const parentLoginBtn = document.getElementById('parent-login');
+            const staffLoginBtn = document.getElementById('staff-login');
+            
+            parentLoginBtn.addEventListener('click', function() {
+                parentLoginBtn.classList.add('active');
+                staffLoginBtn.classList.remove('active');
+            });
+            
+            staffLoginBtn.addEventListener('click', function() {
+                staffLoginBtn.classList.add('active');
+                parentLoginBtn.classList.remove('active');
+            });
+            
+            // Prevent form submission (since there's no backend functionality yet)
+            document.querySelector('.login-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Der Login-Bereich wird in Kürze verfügbar sein! Diese Funktion ist noch in Entwicklung.');
+            });
+        });
+    </script>
+</body>
+</html>

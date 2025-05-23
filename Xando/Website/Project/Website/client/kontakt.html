@@ -1,0 +1,125 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Kunterbunt - Kontakt</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Kunterbunt</h1>
+            <p>Kinderbetreuung nach der Schule</p>
+        </div>
+        <nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="geschichte.html">Geschichte</a></li>
+                <li><a href="programm.html">Programm + Betreuerteam</a></li>
+                <li><a href="betreuungseinheiten.html">Betreuungseinheiten</a></li>
+                <li><a href="angebote.html">Angebotsumfang</a></li>
+                <li><a href="mittagessen.html">Mittagessen</a></li>
+                <li><a href="preisliste.html">Preisliste</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="aktuelles.html">Aktuelles</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li class="account-btn"><a href="#"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="kontakt" class="section">
+            <div class="container">
+                <h2>Kontakt</h2>
+                <p>Nehmen Sie Kontakt mit uns auf. Wir freuen uns auf Ihre Nachricht!</p>
+                
+                <div class="content-block">
+                    <h3>Unsere Kontaktdaten</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Adresse:</strong> Musterstraße 123, 12345 Musterstadt</p>
+                        <p><i class="fas fa-phone"></i> <strong>Telefon:</strong> +49 123 4567890</p>
+                        <p><i class="fas fa-envelope"></i> <strong>E-Mail:</strong> info@kunterbunt.de</p>
+                        <p><i class="fas fa-clock"></i> <strong>Bürozeiten:</strong> Montag bis Freitag, 9:00 - 17:00 Uhr</p>
+                    </div>
+                </div>
+                
+                <div class="content-block">
+                    <h3>Anfahrt</h3>
+                    <div class="map-container">
+                        <!-- Hier könnte eine Google Maps Einbindung erfolgen -->
+                        <img src="https://via.placeholder.com/800x400?text=Karte+mit+Standort" alt="Karte mit Standort" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="directions">
+                        <h4>Mit öffentlichen Verkehrsmitteln:</h4>
+                        <p>Bus Linie 123, Haltestelle "Musterplatz" (2 Gehminuten)</p>
+                        <p>U-Bahn Linie U5, Station "Musterstraße" (5 Gehminuten)</p>
+                        
+                        <h4>Mit dem Auto:</h4>
+                        <p>Parkplätze stehen in begrenzter Anzahl vor dem Gebäude zur Verfügung.</p>
+                    </div>
+                </div>
+                
+                <div class="content-block">
+                    <h3>Kontaktformular</h3>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="E-Mail" required>
+                        <input type="tel" placeholder="Telefon (optional)">
+                        <select>
+                            <option value="" disabled selected>Betreff auswählen</option>
+                            <option value="info">Allgemeine Informationen</option>
+                            <option value="anmeldung">Anmeldung</option>
+                            <option value="besichtigung">Besichtigungstermin</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="sonstiges">Sonstiges</option>
+                        </select>
+                        <textarea placeholder="Ihre Nachricht" required></textarea>
+                        <div class="form-consent">
+                            <input type="checkbox" id="datenschutz" required>
+                            <label for="datenschutz">Ich habe die <a href="datenschutz.html">Datenschutzbestimmungen</a> gelesen und stimme zu.</label>
+                        </div>
+                        <button type="submit" class="btn primary">Nachricht senden</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Kunterbunt</h3>
+                    <p>Kinderbetreuung nach der Schule</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Schnellzugriff</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontakt</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Musterstraße 123, 12345 Musterstadt</p>
+                    <p><i class="fas fa-phone"></i> +49 123 4567890</p>
+                    <p><i class="fas fa-envelope"></i> info@kunterbunt.de</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Kunterbunt. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
