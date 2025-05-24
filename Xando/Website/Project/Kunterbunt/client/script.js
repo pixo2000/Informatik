@@ -1,4 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Show copyright popup on first visit
+    const showCopyrightPopup = function() {
+        if (!localStorage.getItem('copyrightPopupShown')) {
+            const popup = document.getElementById('copyright-popup');
+            popup.classList.add('active');
+            
+            // Close popup when clicking X button
+            const closeBtn = document.querySelector('.close-popup');
+            closeBtn.addEventListener('click', function() {
+                popup.classList.remove('active');
+                localStorage.setItem('copyrightPopupShown', 'true');
+            });
+            
+            // Close popup when clicking "Verstanden" button
+            const acceptBtn = document.getElementById('accept-btn');
+            acceptBtn.addEventListener('click', function() {
+                popup.classList.remove('active');
+                localStorage.setItem('copyrightPopupShown', 'true');
+            });
+        }
+    };
+    
+    // Show popup when page loads
+    showCopyrightPopup();
+    
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -15,12 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Future account area functionality placeholder
-    const accountBtn = document.querySelector('.account-btn a');
-    if (accountBtn) {
-        accountBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Der Login-Bereich wird in Kürze verfügbar sein!');
-        });
-    }
+    // Login button is now active and will navigate to login.html
+    // The preventDefault and alert have been removed
 });
