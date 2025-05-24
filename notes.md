@@ -1,11 +1,17 @@
-# Homepage für Evi Thema UK
+# Kutnerbunt
 
-Bereiche: Information, Verknüpfungen zu anderen Trägern und einrichtungen, zu anbietern von Talkern und Hilfsmitteln und Saminarangebote
+Einfach ne neue Webseite fürs Kunterbunt
 
 ## Notes
 
 bilder fixen
 
-check mobile view
+fix mobile table
 
-fix header 2 lines
+auto update speiseplan
+
+login bereich
+
+logo einfügen + mehr bilder in aktuelles
+
+impressum und datenschutz in footer
