@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansprechpartner - TG Oberjosbach</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-content {
+            min-height: 60vh;
+            padding: 40px 0;
+        }
+        
+        .page-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .contact-card {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        .contact-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .contact-card p {
+            margin-bottom: 5px;
+        }
+        
+        .contact-card .position {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">TG Oberjosbach</a></h1>
+            </div>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Menü öffnen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html#training">Training</a></li>
+                    <li><a href="index.html#sportangebot">Sportangebot</a></li>
+                    <li><a href="index.html#news">News</a></li>
+                    <li><a href="index.html#wir-ueber-uns">Wir über uns</a></li>
+                    <li><a href="index.html#ergebnisse">Ergebnisse</a></li>
+                    <li><a href="index.html#partner">Partner</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <h1>Ansprechpartner</h1>
+            
+            <p>Hier finden Sie alle wichtigen Ansprechpartner unseres Vereins. Zögern Sie nicht, bei Fragen oder Anliegen Kontakt aufzunehmen.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Max Mustermann</h3>
+                    <p class="position">1. Vorsitzender</p>
+                    <p><i class="fas fa-phone"></i> 06127 / 12345-10</p>
+                    <p><i class="fas fa-envelope"></i> vorsitz@tg-oberjosbach.de</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>Erika Musterfrau</h3>
+                    <p class="position">2. Vorsitzende</p>
+                    <p><i class="fas fa-phone"></i> 06127 / 12345-11</p>
+                    <p><i class="fas fa-envelope"></i> stellvertretung@tg-oberjosbach.de</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>Thomas Schmidt</h3>
+                    <p class="position">Kassenwart</p>
+                    <p><i class="fas fa-phone"></i> 06127 / 12345-12</p>
+                    <p><i class="fas fa-envelope"></i> kasse@tg-oberjosbach.de</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>Julia Meyer</h3>
+                    <p class="position">Schriftführerin</p>
+                    <p><i class="fas fa-phone"></i> 06127 / 12345-13</p>
+                    <p><i class="fas fa-envelope"></i> schriftfuehrung@tg-oberjosbach.de</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>Peter Wagner</h3>
+                    <p class="position">Abteilungsleiter Fußball</p>
+                    <p><i class="fas fa-phone"></i> 06127 / 12345-20</p>
+                    <p><i class="fas fa-envelope"></i> fussball@tg-oberjosbach.de</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>Sarah Becker</h3>
+                    <p class="position">Abteilungsleiterin Volleyball</p>
+                    <p><i class="fas fa-phone"></i> 06127 / 12345-21</p>
+                    <p><i class="fas fa-envelope"></i> volleyball@tg-oberjosbach.de</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>Michael Schneider</h3>
+                    <p class="position">Abteilungsleiter Leichtathletik</p>
+                    <p><i class="fas fa-phone"></i> 06127 / 12345-22</p>
+                    <p><i class="fas fa-envelope"></i> leichtathletik@tg-oberjosbach.de</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>Lisa Hoffmann</h3>
+                    <p class="position">Jugendwartin</p>
+                    <p><i class="fas fa-phone"></i> 06127 / 12345-30</p>
+                    <p><i class="fas fa-envelope"></i> jugend@tg-oberjosbach.de</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>TG Oberjosbach</h3>
+                    <p>Sportplatzstraße 1<br>65527 Oberjosbach</p>
+                    <p>Telefon: 06127 / 12345<br>E-Mail: info@tg-oberjosbach.de</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><a href="ansprechpartner.html">Ansprechpartner</a></li>
+                        <li><a href="#">SafeSport EV</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Folge uns</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TG Oberjosbach. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

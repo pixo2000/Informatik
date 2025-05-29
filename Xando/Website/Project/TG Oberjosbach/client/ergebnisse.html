@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ergebnisse - TG Oberjosbach</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">TG Oberjosbach</a></h1>
+            </div>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Menü öffnen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="sportangebot.html">Sportangebot</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="wir-ueber-uns.html">Wir über uns</a></li>
+                    <li><a href="ergebnisse.html" class="active">Ergebnisse</a></li>
+                    <li><a href="partner.html">Partner</a></li>
+                    <li><a href="login.html" class="login-btn"><i class="fas fa-user"></i> Login</a></li>
+                    <li class="dark-mode-toggle" title="Dunkelmodus umschalten">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Ergebnisse</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Startseite</a>
+                    <span class="separator">/</span>
+                    <span>Ergebnisse</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="section">
+            <div class="container">
+                <h2>Aktuelle Ergebnisse</h2>
+                
+                <!-- Tabs for different sports -->
+                <div class="tabs" style="margin-top: 30px;">
+                    <div class="tab-nav" style="display: flex; border-bottom: 1px solid var(--border-color); margin-bottom: 20px;">
+                        <button class="tab-btn active" data-tab="fussball" style="padding: 10px 20px; background: none; border: none; cursor: pointer; border-bottom: 3px solid var(--primary-color); font-weight: bold;">Fußball</button>
+                        <button class="tab-btn" data-tab="volleyball" style="padding: 10px 20px; background: none; border: none; cursor: pointer; border-bottom: 3px solid transparent;">Volleyball</button>
+                        <button class="tab-btn" data-tab="leichtathletik" style="padding: 10px 20px; background: none; border: none; cursor: pointer; border-bottom: 3px solid transparent;">Leichtathletik</button>
+                        <button class="tab-btn" data-tab="tischtennis" style="padding: 10px 20px; background: none; border: none; cursor: pointer; border-bottom: 3px solid transparent;">Tischtennis</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="fussball">
+                        <div class="results-table">
+                            <h3>Fußball - Kreisliga A</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Datum</th>
+                                        <th>Heimteam</th>
+                                        <th>Ergebnis</th>
+                                        <th>Auswärtsteam</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>12.06.2023</td>
+                                        <td>TG Oberjosbach</td>
+                                        <td>3:1</td>
+                                        <td>SV Niederfeld</td>
+                                    </tr>
+                                    <tr>
+                                        <td>05.06.2023</td>
+                                        <td>FC Mittelstadt</td>
+                                        <td>0:2</td>
+                                        <td>TG Oberjosbach</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29.05.2023</td>
+                                        <td>TG Oberjosbach</td>
+                                        <td>1:1</td>
+                                        <td>TSV Oberheim</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22.05.2023</td>
+                                        <td>SV Unterwald</td>
+                                        <td>0:0</td>
+                                        <td>TG Oberjosbach</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15.05.2023</td>
+                                        <td>TG Oberjosbach</td>
+                                        <td>2:0</td>
+                                        <td>SC Waldburg</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="results-table">
+                            <h3>Fußball - Kreisliga A Jugend</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Datum</th>
+                                        <th>Heimteam</th>
+                                        <th>Ergebnis</th>
+                                        <th>Auswärtsteam</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>10.06.2023</td>
+                                        <td>JSG Talheim</td>
+                                        <td>1:3</td>
+                                        <td>TG Oberjosbach</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03.06.2023</td>
+                                        <td>TG Oberjosbach</td>
+                                        <td>4:0</td>
+                                        <td>FC Jugend</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27.05.2023</td>
+                                        <td>SV Bergstadt</td>
+                                        <td>2:2</td>
+                                        <td>TG Oberjosbach</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="volleyball" style="display: none;">
+                        <div class="results-table">
+                            <h3>Volleyball - Bezirksliga</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Datum</th>
+                                        <th>Heimteam</th>
+                                        <th>Ergebnis</th>
+                                        <th>Auswärtsteam</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>10.06.2023</td>
+                                        <td>VC Weststadt</td>
+                                        <td>1:3</td>
+                                        <td>TG Oberjosbach</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03.06.2023</td>
+                                        <td>TG Oberjosbach</td>
+                                        <td>3:0</td>
+                                        <td>SG Nordkreis</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27.05.2023</td>
+                                        <td>VSC Hochberg</td>
+                                        <td>2:3</td>
+                                        <td>TG Oberjosbach</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="leichtathletik" style="display: none;">
+                        <div class="results-table">
+                            <h3>Leichtathletik - Kreis-Meisterschaften 2023</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Disziplin</th>
+                                        <th>Athlet</th>
+                                        <th>Platzierung</th>
+                                        <th>Leistung</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>100m (Männer)</td>
+                                        <td>Tobias Meyer</td>
+                                        <td>2</td>
+                                        <td>11,24s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Weitsprung (Frauen)</td>
+                                        <td>Sophia Becker</td>
+                                        <td>1</td>
+                                        <td>5,86m</td>
+                                    </tr>
+                                    <tr>
+                                        <td>800m (Jugend m)</td>
+                                        <td>Leon Wagner</td>
+                                        <td>3</td>
+                                        <td>2:12,45</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kugelstoß (Frauen)</td>
+                                        <td>Julia Hoffmann</td>
+                                        <td>2</td>
+                                        <td>10,45m</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="tischtennis" style="display: none;">
+                        <div class="results-table">
+                            <h3>Tischtennis - Kreisklasse</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Datum</th>
+                                        <th>Heimteam</th>
+                                        <th>Ergebnis</th>
+                                        <th>Auswärtsteam</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>09.06.2023</td>
+                                        <td>TG Oberjosbach</td>
+                                        <td>9:6</td>
+                                        <td>TTC Hochberg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>02.06.2023</td>
+                                        <td>TTC Niederdorf</td>
+                                        <td>5:9</td>
+                                        <td>TG Oberjosbach</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26.05.2023</td>
+                                        <td>TG Oberjosbach</td>
+                                        <td>9:2</td>
+                                        <td>SV Bergstadt II</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 40px;">
+                    <h2>Tabellen</h2>
+                    
+                    <div class="results-table" style="margin-top: 30px;">
+                        <h3>Fußball - Kreisliga A - Tabelle</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Platz</th>
+                                    <th>Mannschaft</th>
+                                    <th>Spiele</th>
+                                    <th>S</th>
+                                    <th>U</th>
+                                    <th>N</th>
+                                    <th>Tore</th>
+                                    <th>Diff</th>
+                                    <th>Punkte</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>SV Hochheim</td>
+                                    <td>22</td>
+                                    <td>16</td>
+                                    <td>4</td>
+                                    <td>2</td>
+                                    <td>48:18</td>
+                                    <td>+30</td>
+                                    <td>52</td>
+                                </tr>
+                                <tr style="font-weight: bold; color: var(--primary-color);">
+                                    <td>2</td>
+                                    <td>TG Oberjosbach</td>
+                                    <td>22</td>
+                                    <td>15</td>
+                                    <td>5</td>
+                                    <td>2</td>
+                                    <td>43:17</td>
+                                    <td>+26</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>FC Mittelstadt</td>
+                                    <td>22</td>
+                                    <td>13</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>38:22</td>
+                                    <td>+16</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>TSV Oberheim</td>
+                                    <td>22</td>
+                                    <td>11</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>32:25</td>
+                                    <td>+7</td>
+                                    <td>38</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>SV Niederfeld</td>
+                                    <td>22</td>
+                                    <td>10</td>
+                                    <td>4</td>
+                                    <td>8</td>
+                                    <td>30:29</td>
+                                    <td>+1</td>
+                                    <td>34</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>TG Oberjosbach</h3>
+                    <p>Sportplatzstraße 1<br>65527 Oberjosbach</p>
+                    <p>Telefon: 06127 / 12345<br>E-Mail: info@tg-oberjosbach.de</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><a href="ansprechpartner.html">Ansprechpartner</a></li>
+                        <li><a href="https://ansprechstelle-safe-sport.de/" target="_blank">SafeSport EV</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Folge uns</h4>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TG Oberjosbach. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Tab functionality for results page
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.style.display = 'none');
+                    
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = btn.getAttribute('data-tab');
+                    document.getElementById(tabId).style.display = 'block';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
