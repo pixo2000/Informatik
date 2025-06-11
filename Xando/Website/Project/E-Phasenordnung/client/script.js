@@ -3,11 +3,49 @@ let students = [];
 let currentEditId = null;
 let classAssignments = [];
 
-// API Configuration
-const API_BASE_URL = 'http://localhost:5000/api'; // Adjust this to your server URL
+// API Configuration - dynamically determine the base URL
+const getApiBaseUrl = () => {
+    // Try different possible URLs in order of preference
+    const possibleUrls = [
+        'https://miniature-space-capybara-677px59qx9xh5rpg-5000.app.github.dev/api', // GitHub Codespaces
+    ];
+    
+    // For now, return the first one (localhost)
+    return possibleUrls[0];
+};
+
+const API_BASE_URL = getApiBaseUrl();
+
+// Test API connection
+async function testApiConnection() {
+    try {
+        const response = await fetch(`${API_BASE_URL}/health`, {
+            method: 'GET',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        
+        if (response.ok) {
+            console.log('✅ API-Verbindung erfolgreich');
+            return true;
+        } else {
+            console.warn('⚠️ API-Server antwortet, aber mit Fehler:', response.status);
+            return false;
+        }
+    } catch (error) {
+        console.error('❌ API-Verbindung fehlgeschlagen:', error);
+        showNotification('Warnung: Server nicht erreichbar. Daten werden nur lokal gespeichert.', 'warning');
+        return false;
+    }
+}
 
 // Load data from server on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
+    // Test API connection first
+    await testApiConnection();
+    
     loadStudentsFromServer();
     updateStudentCount();
       // Setup form submission
@@ -505,10 +543,17 @@ function showNotification(message, type = 'info') {
     }, 3000);
 }
 
-// Load students from server
+// Load students from server with better error handling
 async function loadStudentsFromServer() {
     try {
-        const response = await fetch(`${API_BASE_URL}/students`);
+        const response = await fetch(`${API_BASE_URL}/students`, {
+            method: 'GET',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -518,17 +563,35 @@ async function loadStudentsFromServer() {
         renderStudentsTable();
         updateStudentCount();
         
+        console.log(`✅ ${students.length} Schüler geladen`);
+        
     } catch (error) {
         console.error('Fehler beim Laden der Schüler:', error);
-        showNotification('Fehler beim Laden der Schüler: ' + error.message, 'error');
+        
+        // Try to load from localStorage as fallback
+        const localData = localStorage.getItem('students_backup');
+        if (localData) {
+            try {
+                students = JSON.parse(localData);
+                renderStudentsTable();
+                updateStudentCount();
+                showNotification('Daten aus lokalem Speicher geladen (Server nicht verfügbar)', 'warning');
+            } catch (parseError) {
+                console.error('Fehler beim Laden aus lokalem Speicher:', parseError);
+                showNotification('Fehler beim Laden der Schüler. Bitte Server prüfen.', 'error');
+            }
+        } else {
+            showNotification('Server nicht erreichbar und keine lokalen Daten vorhanden.', 'error');
+        }
     }
 }
 
-// Add student to server
+// Add student to server with fallback
 async function addStudentToServer(student) {
     try {
         const response = await fetch(`${API_BASE_URL}/students`, {
             method: 'POST',
+            mode: 'cors',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -536,12 +599,16 @@ async function addStudentToServer(student) {
         });
         
         if (!response.ok) {
-            const errorData = await response.json();
+            const errorData = await response.json().catch(() => ({ error: 'Server-Fehler' }));
             throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
         }
         
         const newStudent = await response.json();
         students.push(newStudent);
+        
+        // Save backup to localStorage
+        localStorage.setItem('students_backup', JSON.stringify(students));
+        
         renderStudentsTable();
         updateStudentCount();
         resetForm();
@@ -549,15 +616,25 @@ async function addStudentToServer(student) {
         
     } catch (error) {
         console.error('Fehler beim Hinzufügen des Schülers:', error);
-        showNotification('Fehler beim Hinzufügen des Schülers: ' + error.message, 'error');
+        
+        // Fallback: Add locally
+        students.push(student);
+        localStorage.setItem('students_backup', JSON.stringify(students));
+        
+        renderStudentsTable();
+        updateStudentCount();
+        resetForm();
+        
+        showNotification(`Schüler lokal hinzugefügt (Server-Fehler: ${error.message})`, 'warning');
     }
 }
 
-// Update student on server
+// Update student on server with fallback
 async function updateStudentOnServer(student) {
     try {
         const response = await fetch(`${API_BASE_URL}/students/${student.id}`, {
             method: 'PUT',
+            mode: 'cors',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -565,7 +642,7 @@ async function updateStudentOnServer(student) {
         });
         
         if (!response.ok) {
-            const errorData = await response.json();
+            const errorData = await response.json().catch(() => ({ error: 'Server-Fehler' }));
             throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
         }
         
@@ -575,6 +652,9 @@ async function updateStudentOnServer(student) {
             students[index] = updatedStudent;
         }
         
+        // Save backup to localStorage
+        localStorage.setItem('students_backup', JSON.stringify(students));
+        
         renderStudentsTable();
         updateStudentCount();
         resetForm();
@@ -582,30 +662,54 @@ async function updateStudentOnServer(student) {
         
     } catch (error) {
         console.error('Fehler beim Aktualisieren des Schülers:', error);
-        showNotification('Fehler beim Aktualisieren des Schülers: ' + error.message, 'error');
+        
+        // Fallback: Update locally
+        const index = students.findIndex(s => s.id === student.id);
+        if (index !== -1) {
+            students[index] = student;
+            localStorage.setItem('students_backup', JSON.stringify(students));
+            
+            renderStudentsTable();
+            updateStudentCount();
+            resetForm();
+            
+            showNotification(`Schüler lokal aktualisiert (Server-Fehler: ${error.message})`, 'warning');
+        }
     }
 }
 
-// Delete student from server
+// Delete student from server with fallback
 async function deleteStudentFromServer(id) {
     try {
         const response = await fetch(`${API_BASE_URL}/students/${id}`, {
-            method: 'DELETE'
+            method: 'DELETE',
+            mode: 'cors'
         });
         
         if (!response.ok) {
-            const errorData = await response.json();
+            const errorData = await response.json().catch(() => ({ error: 'Server-Fehler' }));
             throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
         }
         
         students = students.filter(student => student.id !== id);
+        
+        // Save backup to localStorage
+        localStorage.setItem('students_backup', JSON.stringify(students));
+        
         renderStudentsTable();
         updateStudentCount();
         showNotification('Schüler erfolgreich gelöscht!', 'success');
         
     } catch (error) {
         console.error('Fehler beim Löschen des Schülers:', error);
-        showNotification('Fehler beim Löschen des Schülers: ' + error.message, 'error');
+        
+        // Fallback: Delete locally
+        students = students.filter(student => student.id !== id);
+        localStorage.setItem('students_backup', JSON.stringify(students));
+        
+        renderStudentsTable();
+        updateStudentCount();
+        showNotification(`Schüler lokal gelöscht (Server-Fehler: ${error.message})`, 'warning');
     }
 }
 
@@ -953,6 +1057,7 @@ async function assignClasses() {
         
         const response = await fetch(`${API_BASE_URL}/assignments`, {
             method: 'POST',
+            mode: 'cors',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -973,8 +1078,51 @@ async function assignClasses() {
         
     } catch (error) {
         console.error('Fehler bei der Klassenzuordnung:', error);
-        showNotification('Fehler bei der Klassenzuordnung: ' + error.message, 'error');
+        
+        // Fallback: Create assignment locally
+        try {
+            const localResult = createLocalAssignment(numberOfClasses);
+            displayAssignmentResults(localResult);
+            showNotification(`Klassenzuordnung lokal erstellt (Server-Fehler: ${error.message})`, 'warning');
+        } catch (localError) {
+            showNotification('Fehler bei der Klassenzuordnung: ' + localError.message, 'error');
+        }
     }
+}
+
+// Local assignment creation fallback
+function createLocalAssignment(numberOfClasses) {
+    const sortedStudents = [...students].sort((a, b) => (b.prioritaet || 0) - (a.prioritaet || 0));
+    
+    // Initialize classes
+    const classes = [];
+    for (let i = 0; i < numberOfClasses; i++) {
+        classes.push({
+            id: i + 1,
+            name: `Klasse ${i + 1}`,
+            students: [],
+            stats: {
+                'männlich': 0,
+                'weiblich': 0,
+                'subjects': {}
+            }
+        });
+    }
+    
+    // Simple round-robin assignment
+    sortedStudents.forEach((student, index) => {
+        const classIndex = index % numberOfClasses;
+        classes[classIndex].students.push(student);
+        classes[classIndex].stats[student.geschlecht]++;
+    });
+    
+    return {
+        timestamp: new Date().toISOString(),
+        numberOfClasses: numberOfClasses,
+        totalStudents: students.length,
+        assignments: classes,
+        conflicts: []
+    };
 }
 
 // Display assignment results

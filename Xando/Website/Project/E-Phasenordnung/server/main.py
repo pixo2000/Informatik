@@ -8,7 +8,11 @@ import threading
 import time
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+
+# Configure CORS with more permissive settings for development
+CORS(app, origins=["http://localhost:*", "http://127.0.0.1:*", "http://10.0.1.239:*"], 
+     methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+     allow_headers=["Content-Type", "Authorization"])
 
 # Data file paths
 DATA_FILE = 'students.json'
@@ -143,6 +147,24 @@ def clean_old_backups():
                 
     except Exception as e:
         print(f"❌ Fehler beim Aufräumen der Backups: {e}")
+
+@app.before_request
+def handle_preflight():
+    """Handle CORS preflight requests"""
+    if request.method == "OPTIONS":
+        response = jsonify()
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        response.headers.add('Access-Control-Allow-Headers', "*")
+        response.headers.add('Access-Control-Allow-Methods', "*")
+        return response
+
+@app.after_request
+def after_request(response):
+    """Add CORS headers to all responses"""
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    return response
 
 @app.route('/api/students', methods=['GET'])
 def get_students():
@@ -565,11 +587,37 @@ def calculate_priority(student_data):
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
-    return jsonify({
-        'status': 'healthy',
-        'timestamp': datetime.now().isoformat(),
-        'version': '1.0.0'
-    })
+    try:
+        # Check if data files are accessible
+        students_accessible = True
+        assignments_accessible = True
+        
+        try:
+            load_students()
+        except Exception:
+            students_accessible = False
+            
+        try:
+            load_assignments()
+        except Exception:
+            assignments_accessible = False
+        
+        return jsonify({
+            'status': 'healthy',
+            'timestamp': datetime.now().isoformat(),
+            'version': '1.0.0',
+            'data_files': {
+                'students': students_accessible,
+                'assignments': assignments_accessible
+            },
+            'cors_enabled': True
+        })
+    except Exception as e:
+        return jsonify({
+            'status': 'unhealthy',
+            'error': str(e),
+            'timestamp': datetime.now().isoformat()
+        }), 500
 
 @app.errorhandler(404)
 def not_found(error):
@@ -594,9 +642,17 @@ if __name__ == '__main__':
     print("   POST   /api/assignments/student/<id>/move - Schüler zwischen Klassen verschieben")
     print("   GET    /api/health             - Health Check")
     print()
-    print("🌐 Server läuft auf: http://localhost:5000")
+    print("🌐 Server läuft auf:")
+    print("   http://localhost:5000")
+    print("   http://127.0.0.1:5000")
+    print("   http://0.0.0.0:5000")
     print("📝 Daten werden gespeichert in: students.json, assignments.json")
     print("💾 Automatische Backups in: backups/ (alle 5 Minuten)")
+    print("🔧 CORS aktiviert für lokale Entwicklung")
     print()
     
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    try:
+        app.run(debug=True, host='0.0.0.0', port=5000)
+    except Exception as e:
+        print(f"❌ Fehler beim Starten des Servers: {e}")
+        print("💡 Tipp: Prüfen Sie, ob Port 5000 bereits verwendet wird")
