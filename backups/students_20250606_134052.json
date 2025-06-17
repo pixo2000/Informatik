@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1749208055266,
+    "nachname": "Carson Harris",
+    "vorname": "Natalia_Rogahn",
+    "geschlecht": "weiblich",
+    "externerSchueler": false,
+    "rechtzeitigAbgegeben": true,
+    "abgabedatum": null,
+    "zweiteFremdsprache": "Latein",
+    "musischesFach": "Kunst",
+    "religioesesFach": "Ethik",
+    "freiesFach": "Informatik",
+    "freund1": "Alice35",
+    "freund2": "Rafaela_Bernhard",
+    "erstelltAm": "2025-06-06T13:07:35.282412",
+    "prioritaet": 491
+  },
+  {
+    "id": 1749208289579,
+    "nachname": "Kirsten Crooks",
+    "vorname": "Greyson.DuBuque",
+    "geschlecht": "männlich",
+    "externerSchueler": false,
+    "rechtzeitigAbgegeben": true,
+    "abgabedatum": null,
+    "zweiteFremdsprache": "Französisch",
+    "musischesFach": "Kunst",
+    "religioesesFach": "Ethik",
+    "freiesFach": "Informatik",
+    "freund1": "Johnathon.Gorczany97",
+    "freund2": "Britney.Aufderhar99",
+    "erstelltAm": "2025-06-06T13:11:29.608535",
+    "prioritaet": 491
+  },
+  {
+    "id": 1749208715243,
+    "nachname": "Marta Abernathy",
+    "vorname": "Brown_Kris86",
+    "geschlecht": "männlich",
+    "externerSchueler": true,
+    "rechtzeitigAbgegeben": false,
+    "abgabedatum": "2024-08-24",
+    "zweiteFremdsprache": "Latein",
+    "musischesFach": "Kunst",
+    "religioesesFach": "Evangelisch",
+    "freiesFach": "Spanisch (3. Fremdsprache)",
+    "freund1": "Adah.McCullough47",
+    "freund2": "Emie.Kreiger",
+    "erstelltAm": "2025-06-06T13:18:35.262203",
+    "prioritaet": 391
+  }
+]
