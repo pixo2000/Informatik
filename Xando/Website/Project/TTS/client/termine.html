@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termine - Theißtalschule</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">Theißtalschule</a></h1>
+                <p>Die Schule für Niedernhausen</p>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="schule.html" class="nav-link">Unsere Schule</a></li>
+                    <li><a href="termine.html" class="nav-link active">Termine</a></li>
+                    <li><a href="grundschule.html" class="nav-link">Grundschule</a></li>
+                    <li><a href="sekundarstufe.html" class="nav-link">Sekundarstufe</a></li>
+                    <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+                </ul>
+                <button class="dark-mode-toggle" id="darkModeToggle">🌙</button>
+                <button class="mobile-menu-toggle">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Termine</h1>
+                <p>Wichtige Termine und Veranstaltungen</p>
+            </div>
+        </section>
+
+        <section class="calendar-section">
+            <div class="container">
+                <div class="calendar-grid">
+                    <div class="main-calendar">
+                        <h2>Kommende Termine</h2>
+                        
+                        <div class="calendar-month">
+                            <h3>Januar 2025</h3>
+                            <div class="events-list">
+                                <div class="event-item">
+                                    <div class="event-date">
+                                        <span class="day">15</span>
+                                        <span class="month">Jan</span>
+                                    </div>
+                                    <div class="event-details">
+                                        <h4>Tag der offenen Tür</h4>
+                                        <p>10:00 - 14:00 Uhr</p>
+                                        <span class="event-type grundschule">Grundschule</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="event-item">
+                                    <div class="event-date">
+                                        <span class="day">22</span>
+                                        <span class="month">Jan</span>
+                                    </div>
+                                    <div class="event-details">
+                                        <h4>Zeugnisausgabe</h4>
+                                        <p>Nach der 3. Stunde</p>
+                                        <span class="event-type allgemein">Alle Klassen</span>
+                                    </div>
+                                </div>
+
+                                <div class="event-item">
+                                    <div class="event-date">
+                                        <span class="day">28</span>
+                                        <span class="month">Jan</span>
+                                    </div>
+                                    <div class="event-details">
+                                        <h4>Elternsprechtag</h4>
+                                        <p>16:00 - 19:00 Uhr</p>
+                                        <span class="event-type sekundarstufe">Sekundarstufe</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calendar-month">
+                            <h3>Februar 2025</h3>
+                            <div class="events-list">
+                                <div class="event-item">
+                                    <div class="event-date">
+                                        <span class="day">05</span>
+                                        <span class="month">Feb</span>
+                                    </div>
+                                    <div class="event-details">
+                                        <h4>Anmeldewoche Klasse 5</h4>
+                                        <p>8:00 - 16:00 Uhr</p>
+                                        <span class="event-type anmeldung">Anmeldung</span>
+                                    </div>
+                                </div>
+
+                                <div class="event-item">
+                                    <div class="event-date">
+                                        <span class="day">14</span>
+                                        <span class="month">Feb</span>
+                                    </div>
+                                    <div class="event-details">
+                                        <h4>Mathematik-Wettbewerb</h4>
+                                        <p>2. und 3. Stunde</p>
+                                        <span class="event-type wettbewerb">Wettbewerb</span>
+                                    </div>
+                                </div>
+
+                                <div class="event-item">
+                                    <div class="event-date">
+                                        <span class="day">28</span>
+                                        <span class="month">Feb</span>
+                                    </div>
+                                    <div class="event-details">
+                                        <h4>Faschingsfeier</h4>
+                                        <p>1. - 4. Stunde</p>
+                                        <span class="event-type grundschule">Grundschule</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="calendar-sidebar">
+                        <div class="filter-card">
+                            <h3>Filter</h3>
+                            <div class="filter-options">
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" checked data-filter="allgemein">
+                                    <span class="checkmark allgemein"></span>
+                                    Allgemeine Termine
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" checked data-filter="grundschule">
+                                    <span class="checkmark grundschule"></span>
+                                    Grundschule
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" checked data-filter="sekundarstufe">
+                                    <span class="checkmark sekundarstufe"></span>
+                                    Sekundarstufe
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" checked data-filter="anmeldung">
+                                    <span class="checkmark anmeldung"></span>
+                                    Anmeldungen
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" checked data-filter="wettbewerb">
+                                    <span class="checkmark wettbewerb"></span>
+                                    Wettbewerbe
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="quick-info-card">
+                            <h3>Ferienzeiten</h3>
+                            <div class="holiday-item">
+                                <strong>Osterferien 2025</strong>
+                                <p>14.04. - 25.04.2025</p>
+                            </div>
+                            <div class="holiday-item">
+                                <strong>Sommerferien 2025</strong>
+                                <p>21.07. - 29.08.2025</p>
+                            </div>
+                            <div class="holiday-item">
+                                <strong>Herbstferien 2025</strong>
+                                <p>06.10. - 18.10.2025</p>
+                            </div>
+                        </div>
+
+                        <div class="download-card">
+                            <h3>Downloads</h3>
+                            <a href="#" class="download-link">📅 Terminkalender 2025 (PDF)</a>
+                            <a href="#" class="download-link">📋 Ferienübersicht (PDF)</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Theißtalschule</h3>
+                    <p>Die Schule für Niedernhausen</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="#">Schulportal</a></li>
+                        <li><a href="#">Moodle</a></li>
+                        <li><a href="#">Gemeinde Niedernhausen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Rechtliches</h3>
+                    <ul>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">Schulordnung</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Theißtalschule Niedernhausen. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
