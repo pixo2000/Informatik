@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierung - RaphCup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><h2>RaphCup</h2></a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="login.html" class="nav-link">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="auth-main">
+        <div class="auth-container">
+            <div class="auth-form">
+                <h2>Registrierung</h2>
+                
+                <div id="registerSection">
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label for="email">E-Mail:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Passwort:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword">Passwort bestätigen:</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Registrieren</button>
+                    </form>
+                </div>
+
+                <div id="verificationSection" class="verification-section" style="display: none;">
+                    <h3>E-Mail verifizieren</h3>
+                    <p>Wir haben Ihnen einen Verifizierungscode an Ihre E-Mail-Adresse gesendet. Bitte geben Sie den Code ein:</p>
+                    <form id="verifyForm">
+                        <div class="form-group">
+                            <label for="verificationCode">Verifizierungscode:</label>
+                            <input type="text" id="verificationCode" name="verificationCode" required placeholder="z.B. A1B2C3">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Verifizieren</button>
+                    </form>
+                    <p class="resend-link">
+                        <a href="#" id="resendCode">Code erneut senden</a>
+                    </p>
+                </div>
+
+                <div class="auth-links">
+                    <p>Bereits registriert? <a href="login.html">Hier einloggen</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
