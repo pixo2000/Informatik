@@ -1,5 +1,0 @@
-Der Client startet das Game
-Er loggt sich ein und bekommt den key
-er geht in ein game
-der server erstellt eine datenbank für das game für stats, playerid, playername etc
-usw
