@@ -4,4 +4,8 @@ Halt bsaic portfolio und angebot zur eigenen webseite mit kleinen preisen
 
 ## Notes
 
-hier halt notes
+projekte einfügen
+
+geringe formulierungslücken, tags anpassen, einen kurs gegen grundlagen(optimierungs) kurs austauschen
+
+links zu webseiten

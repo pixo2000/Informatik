@@ -57,30 +57,214 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form submission
+    // Portfolio filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    // Ensure all portfolio items are visible initially
+    portfolioItems.forEach(item => {
+        item.style.display = 'block';
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+    });
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            portfolioItems.forEach((item, index) => {
+                const itemCategory = item.getAttribute('data-category');
+                
+                if (filterValue === 'all' || itemCategory === filterValue) {
+                    // Show item
+                    item.style.display = 'block';
+                    
+                    // Animate in with delay
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, index * 100);
+                } else {
+                    // Hide item
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(-20px)';
+                    
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+
+    // Form submission with enhanced validation
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const company = document.getElementById('company').value.trim();
+            const service = document.getElementById('service').value;
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
             
-            // Basic form validation
-            if (!name || !email || !message) {
-                alert('Bitte fülle alle Pflichtfelder aus.');
+            // Enhanced form validation
+            if (!name || !email || !message || !service) {
+                showNotification('Bitte füllen Sie alle Pflichtfelder (*) aus.', 'error');
                 return;
             }
-            
-            // Here you would typically send the data to a server
-            // For demonstration, we'll just show an alert
-            alert('Vielen Dank für deine Nachricht! Ich werde mich so schnell wie möglich bei dir melden.');
-            
-            // Reset form
-            contactForm.reset();
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification('Bitte geben Sie eine gültige E-Mail-Adresse ein.', 'error');
+                return;
+            }
+
+            // Show loading state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Wird gesendet...';
+            submitBtn.disabled = true;
+
+            // Simulate form submission (replace with actual API call)
+            setTimeout(() => {
+                showNotification('Vielen Dank für Ihre Nachricht! Ich melde mich innerhalb von 24 Stunden bei Ihnen.', 'success');
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
         });
     }
+
+    // Notification system
+    function showNotification(message, type = 'info') {
+        // Remove existing notifications
+        const existingNotifications = document.querySelectorAll('.notification');
+        existingNotifications.forEach(notification => notification.remove());
+
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+            <div class="notification-content">
+                <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+                <span>${message}</span>
+                <button class="notification-close" onclick="this.parentElement.parentElement.remove()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        `;
+
+        // Add styles
+        notification.style.cssText = `
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6'};
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            z-index: 10000;
+            min-width: 300px;
+            max-width: 500px;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        `;
+
+        notification.querySelector('.notification-content').style.cssText = `
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        `;
+
+        notification.querySelector('.notification-close').style.cssText = `
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-left: auto;
+            padding: 0;
+            font-size: 1.2rem;
+        `;
+
+        document.body.appendChild(notification);
+
+        // Animate in
+        setTimeout(() => {
+            notification.style.transform = 'translateX(0)';
+        }, 100);
+
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            notification.style.transform = 'translateX(100%)';
+            setTimeout(() => {
+                if (notification.parentElement) {
+                    notification.remove();
+                }
+            }, 300);
+        }, 5000);
+    }
+
+    // Scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation - including portfolio items
+    const animatedElements = document.querySelectorAll('.service-card, .portfolio-item, .factor, .price-category');
+    animatedElements.forEach((el, index) => {
+        // Only animate if not portfolio item (portfolio items have their own animation)
+        if (!el.classList.contains('portfolio-item')) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            
+            // Add staggered delay
+            el.style.transitionDelay = `${index * 0.1}s`;
+        }
+        observer.observe(el);
+    });
+
+    // Ensure sections are visible on page load
+    const sections = document.querySelectorAll('#services, #portfolio');
+    sections.forEach(section => {
+        section.style.display = 'block';
+        section.style.visibility = 'visible';
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+            header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+        } else {
+            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            header.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
+        }
+    });
 });

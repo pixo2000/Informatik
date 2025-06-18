@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio</title>
+    <title>Professionelle Webentwicklung & IT-Dienstleistungen</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -11,12 +11,16 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Mein Portfolio</div>
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>Voidcube</span>
+                </div>
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home">Start</a></li>
                     <li><a href="#about">Über mich</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#services">Angebote</a></li>
+                    <li><a href="#portfolio">Projekte</a></li>
+                    <li><a href="#services">Leistungen</a></li>
+                    <li><a href="#pricing">Preise</a></li>
                     <li><a href="#contact">Kontakt</a></li>
                 </ul>
                 <div class="burger">
@@ -30,9 +34,16 @@
 
     <section id="home" class="hero">
         <div class="container">
-            <h1>Willkommen zu meinem Portfolio</h1>
-            <p>Webentwicklung & Design zu erschwinglichen Preisen</p>
-            <a href="#contact" class="btn">Kontaktiere mich</a>
+            <div class="hero-content">
+                <h1>Professionelle IT-Lösungen für Ihr Unternehmen</h1>
+                <p class="hero-subtitle">Webentwicklung • Softwareentwicklung • Server-Management Kurse</p>
+                <p class="hero-description">Maßgeschneiderte digitale Lösungen von einem erfahrenen Entwickler - 
+                    von der einfachen Website bis zum komplexen Softwaresystem.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Meine Leistungen</a>
+                    <a href="#portfolio" class="btn btn-secondary">Projekte ansehen</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -41,27 +52,60 @@
             <h2>Über mich</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Ich bin ein leidenschaftlicher Webentwickler mit Erfahrung in der Erstellung moderner und benutzerfreundlicher Websites. Mein Ziel ist es, erschwingliche Webdesign-Lösungen anzubieten, ohne Kompromisse bei der Qualität einzugehen.</p>
-                    <p>Mit fundierten Kenntnissen in HTML, CSS und JavaScript erstelle ich responsive Websites, die auf allen Geräten optimal funktionieren.</p>
+                    <p>Als erfahrener Softwareentwickler und IT-Consultant biete ich Ihnen umfassende digitale Lösungen. 
+                    Meine Expertise umfasst die Entwicklung moderner Webanwendungen, Desktop-Software und die Schulung 
+                    in professionellem Server-Management.</p>
+                    
+                    <p>Mein Fokus liegt auf qualitativ hochwertigen, maßgeschneiderten Lösungen, die genau auf Ihre 
+                    Bedürfnisse zugeschnitten sind. Dabei arbeite ich sowohl mit Startups als auch etablierten Unternehmen zusammen.</p>
+                    
+                    <div class="experience-stats">
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Erfolgreiche Projekte</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Jahre Erfahrung</p>
+                        </div>
+                        <div class="stat">
+                            <h3>20+</h3>
+                            <p>Zufriedene Kunden</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="skills">
-                    <h3>Meine Fähigkeiten</h3>
-                    <div class="skill-bars">
-                        <div class="skill">
-                            <span>HTML/CSS</span>
-                            <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                    <h3>Technische Kompetenzen</h3>
+                    <div class="skill-categories">
+                        <div class="skill-category">
+                            <h4>Frontend</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">HTML5</span>
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Vue.js</span>
+                            </div>
                         </div>
-                        <div class="skill">
-                            <span>JavaScript</span>
-                            <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                        <div class="skill-category">
+                            <h4>Backend</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">PHP</span>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">MongoDB</span>
+                            </div>
                         </div>
-                        <div class="skill">
-                            <span>Responsive Design</span>
-                            <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
-                        </div>
-                        <div class="skill">
-                            <span>UI/UX Design</span>
-                            <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                        <div class="skill-category">
+                            <h4>Server & DevOps</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Linux</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">AWS</span>
+                                <span class="skill-tag">Nginx</span>
+                                <span class="skill-tag">Apache</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -71,34 +115,116 @@
 
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2>Mein Portfolio</h2>
+            <h2>Meine Projekte</h2>
+            <p class="section-description">Ein Überblick über meine neuesten Arbeiten in den Bereichen Webentwicklung, Softwareentwicklung und Schulungen</p>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Alle Projekte</button>
+                <button class="filter-btn" data-filter="websites">Websites</button>
+                <button class="filter-btn" data-filter="software">Software</button>
+                <button class="filter-btn" data-filter="courses">Kurse</button>
+            </div>
+            
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/350x250" alt="Projekt 1">
-                    <div class="portfolio-overlay">
-                        <h3>E-Commerce Website</h3>
-                        <p>Responsive Online-Shop mit Zahlungsintegration</p>
+                <div class="portfolio-item" data-category="websites">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop" alt="E-Commerce Platform">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Website</div>
+                        <h3>E-Commerce Platform</h3>
+                        <p>Vollständige Online-Shop Lösung mit Zahlungsintegration, Produktverwaltung und Kundenverwaltungssystem für einen mittelständischen Einzelhändler.</p>
+                        <div class="portfolio-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe</span>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/350x250" alt="Projekt 2">
-                    <div class="portfolio-overlay">
-                        <h3>Restaurant Website</h3>
-                        <p>Moderne Website mit Online-Reservierungssystem</p>
+                
+                <div class="portfolio-item" data-category="software">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=300&fit=crop" alt="Inventory Management System">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Software</div>
+                        <h3>Lagerverwaltungssystem</h3>
+                        <p>Desktop-Anwendung für effiziente Lagerverwaltung mit Barcode-Scanner Integration und automatischen Bestellvorschlägen.</p>
+                        <div class="portfolio-tech">
+                            <span>Python</span>
+                            <span>Tkinter</span>
+                            <span>SQLite</span>
+                            <span>Barcode API</span>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/350x250" alt="Projekt 3">
-                    <div class="portfolio-overlay">
-                        <h3>Portfolio Website</h3>
-                        <p>Minimalistisches Design für einen Fotografen</p>
+                
+                <div class="portfolio-item" data-category="courses">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=400&h=300&fit=crop" alt="Linux Server Administration Course">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Kurs</div>
+                        <h3>Linux Server Administration</h3>
+                        <p>Umfassender 5-tägiger Kurs für Linux-Serveradministration von Grundlagen bis zum Profi-Level mit praktischen Übungen.</p>
+                        <div class="portfolio-tech">
+                            <span>Linux</span>
+                            <span>Bash</span>
+                            <span>Docker</span>
+                            <span>Nginx</span>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/350x250" alt="Projekt 4">
-                    <div class="portfolio-overlay">
-                        <h3>Blog Website</h3>
-                        <p>Content-Management-System für einfache Aktualisierungen</p>
+                
+                <div class="portfolio-item" data-category="websites">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop" alt="Corporate Website">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Website</div>
+                        <h3>Unternehmenswebsite</h3>
+                        <p>Professionelle mehrsprachige Website für ein Beratungsunternehmen mit CMS, Blog-System und Kontaktformularen.</p>
+                        <div class="portfolio-tech">
+                            <span>Vue.js</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>CMS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="software">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop" alt="CRM System">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Software</div>
+                        <h3>CRM-System</h3>
+                        <p>Kundenbeziehungsmanagement-System mit Automatisierung, E-Mail-Marketing und detailliertem Reporting für Vertriebsteams.</p>
+                        <div class="portfolio-tech">
+                            <span>React</span>
+                            <span>Express</span>
+                            <span>PostgreSQL</span>
+                            <span>Redis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="courses">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop" alt="Docker & Containerization">
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Kurs</div>
+                        <h3>Docker & Containerization</h3>
+                        <p>Praxisorientierter 3-tägiger Kurs für moderne Container-Technologien, Orchestrierung und DevOps-Best-Practices.</p>
+                        <div class="portfolio-tech">
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                            <span>DevOps</span>
+                            <span>CI/CD</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,102 +233,211 @@
 
     <section id="services" class="services">
         <div class="container">
-            <h2>Meine Angebote</h2>
-            <p class="section-description">Professionelle Webseiten zu kleinen Preisen</p>
+            <h2>Meine Leistungen</h2>
+            <p class="section-description">Umfassende IT-Dienstleistungen für Unternehmen jeder Größe - von der kleinen Website bis zur komplexen Softwarelösung</p>
             
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Basic</h3>
-                        <div class="price">199€</div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
                     </div>
-                    <ul class="features">
-                        <li>Responsive 1-5 Seiten</li>
-                        <li>Grundlegendes SEO</li>
-                        <li>Kontaktformular</li>
-                        <li>Mobile Optimierung</li>
-                        <li>2 Revisionsrunden</li>
+                    <h3>Webentwicklung</h3>
+                    <p>Moderne, responsive Websites und Webanwendungen mit neuesten Technologien und Best Practices für optimale Performance.</p>
+                    <ul class="service-features">
+                        <li>Responsive Design für alle Geräte</li>
+                        <li>SEO-optimiert und schnell ladend</li>
+                        <li>Content Management Systeme (CMS)</li>
+                        <li>E-Commerce Lösungen mit Zahlungsintegration</li>
+                        <li>Progressive Web Apps (PWA)</li>
+                        <li>REST API Entwicklung</li>
+                        <li>Wartung und technischer Support</li>
                     </ul>
-                    <a href="#contact" class="btn">Auswählen</a>
                 </div>
                 
-                <div class="pricing-card featured">
-                    <div class="pricing-header">
-                        <h3>Standard</h3>
-                        <div class="price">399€</div>
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    <ul class="features">
-                        <li>Responsive bis zu 10 Seiten</li>
-                        <li>Erweitertes SEO</li>
-                        <li>Kontaktformular</li>
-                        <li>Social Media Integration</li>
-                        <li>Google Maps Integration</li>
-                        <li>Content Management System</li>
-                        <li>3 Revisionsrunden</li>
+                    <h3>Softwareentwicklung</h3>
+                    <p>Maßgeschneiderte Desktop- und Serveranwendungen für Ihre spezifischen Geschäftsanforderungen und Arbeitsabläufe.</p>
+                    <ul class="service-features">
+                        <li>Desktop-Anwendungen (Windows, Mac, Linux)</li>
+                        <li>Datenbankanwendungen und -design</li>
+                        <li>Automatisierungstools und Scripts</li>
+                        <li>Integration bestehender Systeme</li>
+                        <li>Migration und Modernisierung</li>
+                        <li>Performance-Optimierung</li>
+                        <li>Langfristige Wartung und Updates</li>
                     </ul>
-                    <a href="#contact" class="btn">Auswählen</a>
                 </div>
                 
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Premium</h3>
-                        <div class="price">699€</div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-server"></i>
                     </div>
-                    <ul class="features">
-                        <li>Responsive unbegrenzte Seiten</li>
-                        <li>Umfassendes SEO</li>
-                        <li>Fortgeschrittene Formulare</li>
-                        <li>E-Commerce Integration</li>
-                        <li>Benutzerdefinierte Funktionen</li>
-                        <li>Content Management System</li>
-                        <li>Premium Support</li>
-                        <li>Unbegrenzte Revisionen</li>
+                    <h3>Server-Management Kurse</h3>
+                    <p>Professionelle Schulungen für Linux-Serveradministration, DevOps-Praktiken und moderne Infrastruktur-Management.</p>
+                    <ul class="service-features">
+                        <li>Linux Grundlagen bis Expert-Level</li>
+                        <li>Docker & Container-Orchestrierung</li>
+                        <li>Nginx & Apache Webserver-Konfiguration</li>
+                        <li>Sicherheit, Monitoring & Logging</li>
+                        <li>Backup-Strategien und Disaster Recovery</li>
+                        <li>CI/CD Pipeline Setup</li>
+                        <li>Praxisnahe Workshops mit Zertifikat</li>
                     </ul>
-                    <a href="#contact" class="btn">Auswählen</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Preisgestaltung</h2>
+            <div class="pricing-info">
+                <div class="pricing-explanation">
+                    <h3>Faire und transparente Preise</h3>
+                    <p>Meine Preise sind dynamisch und richten sich nach verschiedenen Faktoren:</p>
+                    <div class="pricing-factors">
+                        <div class="factor">
+                            <i class="fas fa-building"></i>
+                            <div>
+                                <h4>Unternehmensgröße</h4>
+                                <p>Startups und kleine Unternehmen erhalten günstigere Konditionen</p>
+                            </div>
+                        </div>
+                        <div class="factor">
+                            <i class="fas fa-tasks"></i>
+                            <div>
+                                <h4>Projektumfang</h4>
+                                <p>Komplexität und Umfang des Projekts bestimmen den Aufwand</p>
+                            </div>
+                        </div>
+                        <div class="factor">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Aktuelle Auslastung</h4>
+                                <p>Bei geringerer Auslastung können bessere Preise angeboten werden</p>
+                            </div>
+                        </div>
+                        <div class="factor">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <h4>Zeitrahmen</h4>
+                                <p>Flexible Deadlines ermöglichen günstigere Preise</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pricing-ranges">
+                    <h3>Ungefähre Preisspannen</h3>
+                    <div class="price-categories">
+                        <div class="price-category">
+                            <h4>Websites</h4>
+                            <div class="price-range">
+                                <span class="price-from">ab 299€</span>
+                                <span class="price-to">bis 2.500€+</span>
+                            </div>
+                            <p>Je nach Komplexität und Funktionsumfang</p>
+                        </div>
+                        <div class="price-category">
+                            <h4>Software</h4>
+                            <div class="price-range">
+                                <span class="price-from">ab 599€</span>
+                                <span class="price-to">bis 5.000€+</span>
+                            </div>
+                            <p>Abhängig von Anforderungen und Integration</p>
+                        </div>
+                        <div class="price-category">
+                            <h4>Kurse</h4>
+                            <div class="price-range">
+                                <span class="price-from">ab 199€</span>
+                                <span class="price-to">bis 899€</span>
+                            </div>
+                            <p>Pro Person, Gruppenrabatte verfügbar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pricing-cta">
+                <h3>Interessiert? Lassen Sie uns sprechen!</h3>
+                <p>Kontaktieren Sie mich für ein unverbindliches Gespräch und ein maßgeschneidertes Angebot</p>
+                <a href="#contact" class="btn btn-primary">Kostenlose Beratung anfragen</a>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Kontaktiere mich</h2>
+            <h2>Kontakt</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>email@example.com</p>
+                    <h3>Lassen Sie uns Ihr Projekt besprechen</h3>
+                    <p>Ich freue mich darauf, von Ihnen zu hören und gemeinsam die beste Lösung für Ihre Anforderungen zu finden.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>E-Mail</h4>
+                                <p>kontakt@Voidcube.de</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefon</h4>
+                                <p>+49 123 456 789</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Standort</h4>
+                                <p>Berlin, Deutschland</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <p>+49 123 456 789</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Berlin, Deutschland</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+                    
+                    <div class="response-time">
+                        <i class="fas fa-clock"></i>
+                        <p>Antwortzeit: Innerhalb von 24 Stunden</p>
                     </div>
                 </div>
+                
                 <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Dein Name" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Ihr Name *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Ihre E-Mail *" required>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Deine E-Mail" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="company" placeholder="Unternehmen">
+                        </div>
+                        <div class="form-group">
+                            <select id="service" required>
+                                <option value="">Gewünschte Leistung *</option>
+                                <option value="website">Website</option>
+                                <option value="software">Software</option>
+                                <option value="course">Kurs</option>
+                                <option value="consulting">Beratung</option>
+                                <option value="other">Sonstiges</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="form-group">
                         <input type="text" id="subject" placeholder="Betreff">
                     </div>
                     <div class="form-group">
-                        <textarea id="message" placeholder="Deine Nachricht" required></textarea>
+                        <textarea id="message" placeholder="Beschreiben Sie Ihr Projekt oder Ihre Anfrage..." required></textarea>
                     </div>
-                    <button type="submit" class="btn">Nachricht senden</button>
+                    <button type="submit" class="btn btn-primary">Nachricht senden</button>
                 </form>
             </div>
         </div>
@@ -210,7 +445,36 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Mein Portfolio. Alle Rechte vorbehalten.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-code"></i>
+                        <span>Voidcube</span>
+                    </div>
+                    <p>Professionelle IT-Lösungen für Ihr Unternehmen</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Schnelllinks</h4>
+                    <ul>
+                        <li><a href="#about">Über mich</a></li>
+                        <li><a href="#portfolio">Projekte</a></li>
+                        <li><a href="#services">Leistungen</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Folgen Sie mir</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-xing"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Voidcube. Alle Rechte vorbehalten. | <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+            </div>
         </div>
     </footer>
 
