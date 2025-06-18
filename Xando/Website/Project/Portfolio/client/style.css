@@ -877,6 +877,101 @@ footer {
     }
 }
 
+/* Work in Progress Popup */
+.wip-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.wip-popup.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wip-popup-content {
+    background-color: var(--light-bg);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-xl);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.wip-popup:not(.hidden) .wip-popup-content {
+    transform: scale(1);
+}
+
+.wip-popup-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--warning-color), #ff8c00);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2.5rem;
+    color: var(--light-text);
+}
+
+.wip-popup h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.wip-popup p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.wip-popup-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wip-popup .btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+}
+
+.wip-popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-light);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.wip-popup-close:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 1024px) {
     .hero h1 {
@@ -1000,6 +1095,22 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+    
+    .wip-popup-content {
+        padding: 30px 20px;
+    }
+    
+    .wip-popup h3 {
+        font-size: 1.5rem;
+    }
+    
+    .wip-popup p {
+        font-size: 1rem;
+    }
+    
+    .wip-popup-buttons {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1030,5 +1141,15 @@ footer {
     
     .pricing-cta {
         padding: 30px 20px;
+    }
+    
+    .wip-popup-content {
+        padding: 25px 15px;
+    }
+    
+    .wip-popup-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
     }
 }

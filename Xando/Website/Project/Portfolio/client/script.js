@@ -1,4 +1,65 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Work in Progress Popup
+    const wipPopup = document.getElementById('wip-popup');
+    const wipCloseBtn = document.querySelector('.wip-popup-close');
+    const wipContinueBtn = document.querySelector('.wip-continue-btn');
+    const wipContactBtn = document.querySelector('.wip-contact-btn');
+
+    // Check if user has already seen the popup today
+    const today = new Date().toDateString();
+    const lastSeen = localStorage.getItem('wip-popup-seen');
+    
+    if (lastSeen !== today) {
+        // Show popup after a short delay
+        setTimeout(() => {
+            wipPopup.classList.remove('hidden');
+        }, 1000);
+    } else {
+        // Hide popup immediately if already seen today
+        wipPopup.classList.add('hidden');
+    }
+
+    // Close popup and remember choice
+    function closePopup() {
+        wipPopup.classList.add('hidden');
+        localStorage.setItem('wip-popup-seen', today);
+    }
+
+    // Event listeners for popup
+    if (wipCloseBtn) {
+        wipCloseBtn.addEventListener('click', closePopup);
+    }
+
+    if (wipContinueBtn) {
+        wipContinueBtn.addEventListener('click', closePopup);
+    }
+
+    if (wipContactBtn) {
+        wipContactBtn.addEventListener('click', () => {
+            closePopup();
+            // Scroll to contact section
+            setTimeout(() => {
+                document.querySelector('#contact').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }, 500);
+        });
+    }
+
+    // Close popup when clicking outside
+    wipPopup.addEventListener('click', (e) => {
+        if (e.target === wipPopup) {
+            closePopup();
+        }
+    });
+
+    // Close popup with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !wipPopup.classList.contains('hidden')) {
+            closePopup();
+        }
+    });
+
     // Mobile Navigation
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
