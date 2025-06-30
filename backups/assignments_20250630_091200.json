@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-06-06T13:50:29.663338",
+  "timestamp": "2025-06-30T09:08:29.703429",
   "numberOfClasses": 3,
   "totalStudents": 4,
   "assignments": [
@@ -120,5 +120,6 @@
         }
       }
     }
-  ]
+  ],
+  "success": true
 }

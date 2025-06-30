@@ -5,13 +5,22 @@ let classAssignments = [];
 
 // API Configuration - dynamically determine the base URL
 const getApiBaseUrl = () => {
-    // Try different possible URLs in order of preference
-    const possibleUrls = [
-        'https://miniature-space-capybara-677px59qx9xh5rpg-5000.app.github.dev/api', // GitHub Codespaces
-    ];
+    // Check if we're running in different environments
+    const hostname = window.location.hostname;
+    const protocol = window.location.protocol;
     
-    // For now, return the first one (localhost)
-    return possibleUrls[0];
+    // If we're running locally (file:// or localhost)
+    if (hostname === 'localhost' || hostname === '127.0.0.1' || protocol === 'file:') {
+        return 'http://localhost:5000/api';
+    }
+    
+    // GitHub Codespaces or other environments
+    if (hostname.includes('github.dev')) {
+        return 'https://miniature-space-capybara-677px59qx9xh5rpg-5000.app.github.dev/api';
+    }
+    
+    // Default to localhost for development
+    return 'http://localhost:5000/api';
 };
 
 const API_BASE_URL = getApiBaseUrl();
@@ -43,12 +52,18 @@ async function testApiConnection() {
 
 // Load data from server on page load
 document.addEventListener('DOMContentLoaded', async function() {
+    console.log('🚀 DOM Content Loaded - Initialisiere Anwendung');
+    
     // Test API connection first
+    console.log('🔍 Teste API-Verbindung...');
     await testApiConnection();
     
+    console.log('📥 Lade Schülerdaten vom Server...');
     loadStudentsFromServer();
     updateStudentCount();
-      // Setup form submission
+    
+    console.log('⚙️ Richte Event-Listener ein...');
+    // Setup form submission
     document.getElementById('studentForm').addEventListener('submit', handleFormSubmit);
     
     // Setup validation for special subject combinations
@@ -78,25 +93,45 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     });
     
-    // Setup assignment button event listeners
+    // Prevent form submission on assignment controls
+    const assignmentForm = document.querySelector('.class-assignment-section');
+    if (assignmentForm) {
+        assignmentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            return false;
+        });
+    }
+    
+    // Setup assignment button event listeners with proper event handling
     const assignBtn = document.getElementById('assignClassesBtn');
     const resetBtn = document.getElementById('resetAssignmentsBtn');
     
     if (assignBtn) {
+        console.log('🔧 Richte Assignment-Button Event-Listener ein');
         assignBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
+            console.log('🖱️ Assignment-Button geklickt', e);
             assignClasses();
+            return false;
         });
+    } else {
+        console.warn('⚠️ Assignment-Button nicht gefunden');
     }
     
     if (resetBtn) {
+        console.log('🔧 Richte Reset-Button Event-Listener ein');
         resetBtn.addEventListener('click', function(e) {
+            console.log('🖱️ Reset-Button geklickt', e);
             e.preventDefault();
             e.stopPropagation();
+            e.stopImmediatePropagation();
             resetClassAssignments();
+            return false;
         });
+    } else {
+        console.warn('⚠️ Reset-Button nicht gefunden');
     }
+    
+    console.log('✅ DOM Content Loaded abgeschlossen');
 });
 
 // Toggle date input based on checkbox
@@ -117,6 +152,8 @@ function toggleDateInput() {
 
 // Tab switching functionality
 function showTab(tabName) {
+    console.log(`🔄 Wechsle zu Tab: ${tabName}`);
+    
     // Hide all tabs
     document.querySelectorAll('.tab-content').forEach(tab => {
         tab.classList.remove('active');
@@ -144,22 +181,30 @@ function showTab(tabName) {
     
     // Update student count when switching to overview
     if (tabName === 'overview') {
+        console.log('📊 Aktualisiere Übersicht...');
         updateStudentCount();
         renderStudentsTable();
     }
+    
+    console.log(`✅ Tab-Wechsel zu ${tabName} abgeschlossen`);
 }
 
 // Form submission handler
 function handleFormSubmit(event) {
+    console.log('📝 Form-Submit Event empfangen', event);
     event.preventDefault();
     
     if (!validateForm()) {
+        console.log('❌ Form-Validierung fehlgeschlagen');
         return;
     }
     
+    console.log('✅ Form-Validierung erfolgreich');
+    
     const formData = new FormData(event.target);
     const studentData = {
-        id: currentEditId || Date.now(),        nachname: formData.get('nachname').trim(),
+        id: currentEditId || Date.now(),
+        nachname: formData.get('nachname').trim(),
         vorname: formData.get('vorname').trim(),
         geschlecht: formData.get('geschlecht'),
         externerSchueler: formData.get('externerSchueler') === 'on',
@@ -172,13 +217,16 @@ function handleFormSubmit(event) {
         freund1: formData.get('freund1').trim(),
         freund2: formData.get('freund2').trim(),
         erstelltAm: currentEditId ? findStudentById(currentEditId).erstelltAm : new Date().toISOString(),
-        // Priorität basierend auf Position nach Abgabedatum und Abgabedatum selbst
         prioritaet: calculatePriority(formData)
     };
     
+    console.log('👤 Schülerdaten erstellt:', studentData);
+    
     if (currentEditId) {
+        console.log(`🔄 Aktualisiere Schüler mit ID: ${currentEditId}`);
         updateStudentOnServer(studentData);
     } else {
+        console.log('➕ Füge neuen Schüler hinzu');
         addStudentToServer(studentData);
     }
 }
@@ -430,8 +478,8 @@ function renderStudentsTable(searchTerm = '') {
             student.musischesFach.toLowerCase().includes(searchTerm) ||
             student.religioesesFach.toLowerCase().includes(searchTerm) ||
             student.freiesFach.toLowerCase().includes(searchTerm) ||
-            student.freund1.toLowerCase().includes(searchTerm) ||
-            student.freund2.toLowerCase().includes(searchTerm);
+            (student.freund1 && student.freund1.toLowerCase().includes(searchTerm)) ||
+            (student.freund2 && student.freund2.toLowerCase().includes(searchTerm));
             
         const matchesGender = !genderFilter || student.geschlecht === genderFilter;
         const matchesLanguage = !languageFilter || student.zweiteFremdsprache === languageFilter;
@@ -441,7 +489,8 @@ function renderStudentsTable(searchTerm = '') {
     
     // Sort by priority (highest first)
     filteredStudents.sort((a, b) => (b.prioritaet || 0) - (a.prioritaet || 0));
-      if (filteredStudents.length === 0) {
+    
+    if (filteredStudents.length === 0) {
         tbody.innerHTML = `
             <tr>
                 <td colspan="10" class="empty-state">
@@ -453,7 +502,8 @@ function renderStudentsTable(searchTerm = '') {
         updateStudentCount(0);
         return;
     }
-      tbody.innerHTML = filteredStudents.map((student, index) => `
+    
+    tbody.innerHTML = filteredStudents.map((student, index) => `
         <tr>
             <td>
                 <strong>${student.nachname}, ${student.vorname}</strong>
@@ -463,7 +513,7 @@ function renderStudentsTable(searchTerm = '') {
             </td>
             <td>${student.geschlecht}</td>
             <td>
-                <span class="status-badge ${student.externerSchueler ? 'status-info' : 'status-success'}">
+                <span class="status-badge ${student.externerSchueler ? 'status-warning' : 'status-success'}">
                     ${student.externerSchueler ? '🔗 Extern' : '🏫 Intern'}
                 </span>
             </td>
@@ -479,9 +529,9 @@ function renderStudentsTable(searchTerm = '') {
                     ${student.rechtzeitigAbgegeben ? '✓ Ja' : '✗ Nein'}
                 </span>
             </td>
-            <td>
-                <button class="btn btn-sm btn-primary" onclick="editStudent(${student.id})">Bearbeiten</button>
-                <button class="btn btn-sm btn-danger" onclick="deleteStudent(${student.id})">Löschen</button>
+            <td class="actions">
+                <button class="action-btn edit-btn" onclick="editStudent(${student.id})">Bearbeiten</button>
+                <button class="action-btn delete-btn" onclick="deleteStudent(${student.id})">Löschen</button>
             </td>
         </tr>
     `).join('');
@@ -532,6 +582,8 @@ function findStudentById(id) {
 
 // Show notification
 function showNotification(message, type = 'info') {
+    console.log(`📢 Zeige Notification: [${type.toUpperCase()}] ${message}`);
+    
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
     notification.textContent = message;
@@ -540,11 +592,14 @@ function showNotification(message, type = 'info') {
     
     setTimeout(() => {
         notification.remove();
+        console.log('🗑️ Notification entfernt');
     }, 3000);
 }
 
 // Load students from server with better error handling
 async function loadStudentsFromServer() {
+    console.log('📥 Lade Schüler vom Server...');
+    
     try {
         const response = await fetch(`${API_BASE_URL}/students`, {
             method: 'GET',
@@ -554,33 +609,37 @@ async function loadStudentsFromServer() {
             },
         });
         
+        console.log('📥 Students Response:', response.status, response.statusText);
+        
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         
         const data = await response.json();
         students = data;
+        console.log(`✅ ${students.length} Schüler vom Server geladen:`, students);
+        
         renderStudentsTable();
         updateStudentCount();
         
-        console.log(`✅ ${students.length} Schüler geladen`);
-        
     } catch (error) {
-        console.error('Fehler beim Laden der Schüler:', error);
+        console.error('❌ Fehler beim Laden der Schüler vom Server:', error);
         
         // Try to load from localStorage as fallback
         const localData = localStorage.getItem('students_backup');
         if (localData) {
             try {
                 students = JSON.parse(localData);
+                console.log(`🔄 ${students.length} Schüler aus lokalem Speicher geladen:`, students);
                 renderStudentsTable();
                 updateStudentCount();
                 showNotification('Daten aus lokalem Speicher geladen (Server nicht verfügbar)', 'warning');
             } catch (parseError) {
-                console.error('Fehler beim Laden aus lokalem Speicher:', parseError);
+                console.error('❌ Fehler beim Parsen der lokalen Daten:', parseError);
                 showNotification('Fehler beim Laden der Schüler. Bitte Server prüfen.', 'error');
             }
         } else {
+            console.warn('⚠️ Keine lokalen Backup-Daten gefunden');
             showNotification('Server nicht erreichbar und keine lokalen Daten vorhanden.', 'error');
         }
     }
@@ -807,6 +866,8 @@ function dragStudent(event) {
     const studentId = event.target.closest('.draggable-student').dataset.studentId;
     const sourceClassId = event.target.closest('.editable-class-card').dataset.classId;
     
+    console.log(`🐭 Drag gestartet: Schüler ${studentId} aus Klasse ${sourceClassId}`);
+    
     event.dataTransfer.setData('text/plain', JSON.stringify({
         studentId: parseInt(studentId),
         sourceClassId: parseInt(sourceClassId)
@@ -830,8 +891,11 @@ function dropStudent(event) {
         const dragData = JSON.parse(event.dataTransfer.getData('text/plain'));
         const targetClassId = parseInt(targetClassCard.dataset.classId);
         
+        console.log(`🎯 Drop ausgeführt: Schüler ${dragData.studentId} von Klasse ${dragData.sourceClassId} zu Klasse ${targetClassId}`);
+        
         // Don't move if dropping in the same class
         if (dragData.sourceClassId === targetClassId) {
+            console.log('⏭️ Drop ignoriert - gleiche Klasse');
             document.querySelector('.dragging')?.classList.remove('dragging');
             return;
         }
@@ -839,7 +903,7 @@ function dropStudent(event) {
         moveStudentBetweenClasses(dragData.studentId, dragData.sourceClassId, targetClassId);
         
     } catch (error) {
-        console.error('Error in drop:', error);
+        console.error('💥 Fehler beim Drop:', error);
         showNotification('Fehler beim Verschieben des Schülers', 'error');
     }
     
@@ -1040,20 +1104,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Automatic class assignment function
 async function assignClasses() {
+    console.log('🎯 Starte automatische Klassenzuordnung');
+    
     const numberOfClasses = parseInt(document.getElementById('numberOfClasses').value);
+    console.log(`📊 Anzahl Klassen: ${numberOfClasses}`);
     
     if (!numberOfClasses || numberOfClasses < 1) {
+        console.log('❌ Ungültige Anzahl von Klassen');
         showNotification('Bitte geben Sie eine gültige Anzahl von Klassen ein.', 'error');
-        return;
+        return false;
     }
     
     if (students.length === 0) {
+        console.log('❌ Keine Schüler vorhanden');
         showNotification('Keine Schüler vorhanden. Bitte fügen Sie zuerst Schüler hinzu.', 'error');
-        return;
+        return false;
+    }
+    
+    if (students.length < numberOfClasses) {
+        console.log(`❌ Nicht genug Schüler (${students.length}) für ${numberOfClasses} Klassen`);
+        showNotification(`Es müssen mindestens ${numberOfClasses} Schüler vorhanden sein.`, 'error');
+        return false;
     }
     
     try {
+        console.log('📡 Sende Assignment-Request an Server');
         showNotification('Klassenzuordnung wird erstellt...', 'info');
+        
+        // Disable the button to prevent multiple clicks
+        const assignBtn = document.getElementById('assignClassesBtn');
+        const originalText = assignBtn.textContent;
+        assignBtn.disabled = true;
+        assignBtn.textContent = 'Erstelle Zuordnung...';
+        console.log('🔒 Assignment-Button deaktiviert');
+        
+        const requestData = { numberOfClasses: numberOfClasses };
+        console.log('📤 Request-Daten:', requestData);
         
         const response = await fetch(`${API_BASE_URL}/assignments`, {
             method: 'POST',
@@ -1061,81 +1147,72 @@ async function assignClasses() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                numberOfClasses: numberOfClasses
-            })
+            body: JSON.stringify(requestData)
         });
         
+        console.log('📥 Server-Response empfangen:', response.status, response.statusText);
+        
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            const errorData = await response.json();
+            console.error('❌ Server-Fehler:', errorData);
+            throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
         }
         
         const result = await response.json();
+        console.log('✅ Assignment-Ergebnis empfangen:', result);
         
         // Display assignment results
+        console.log('🖼️ Zeige Assignment-Ergebnisse an');
         displayAssignmentResults(result);
         showNotification('Klassenzuordnung erfolgreich erstellt!', 'success');
         
+        // Re-enable button
+        assignBtn.disabled = false;
+        assignBtn.textContent = originalText;
+        console.log('🔓 Assignment-Button wieder aktiviert');
+        
+        return false;
+        
     } catch (error) {
-        console.error('Fehler bei der Klassenzuordnung:', error);
+        console.error('💥 Fehler bei der Klassenzuordnung:', error);
+        
+        // Re-enable button
+        const assignBtn = document.getElementById('assignClassesBtn');
+        assignBtn.disabled = false;
+        assignBtn.textContent = 'Klassen automatisch zuordnen';
+        console.log('🔓 Assignment-Button nach Fehler wieder aktiviert');
         
         // Fallback: Create assignment locally
         try {
+            console.log('🔄 Versuche lokale Assignment-Erstellung als Fallback');
             const localResult = createLocalAssignment(numberOfClasses);
+            console.log('✅ Lokales Assignment erstellt:', localResult);
             displayAssignmentResults(localResult);
             showNotification(`Klassenzuordnung lokal erstellt (Server-Fehler: ${error.message})`, 'warning');
         } catch (localError) {
+            console.error('💥 Fehler bei lokaler Assignment-Erstellung:', localError);
             showNotification('Fehler bei der Klassenzuordnung: ' + localError.message, 'error');
         }
+        
+        return false;
     }
-}
-
-// Local assignment creation fallback
-function createLocalAssignment(numberOfClasses) {
-    const sortedStudents = [...students].sort((a, b) => (b.prioritaet || 0) - (a.prioritaet || 0));
-    
-    // Initialize classes
-    const classes = [];
-    for (let i = 0; i < numberOfClasses; i++) {
-        classes.push({
-            id: i + 1,
-            name: `Klasse ${i + 1}`,
-            students: [],
-            stats: {
-                'männlich': 0,
-                'weiblich': 0,
-                'subjects': {}
-            }
-        });
-    }
-    
-    // Simple round-robin assignment
-    sortedStudents.forEach((student, index) => {
-        const classIndex = index % numberOfClasses;
-        classes[classIndex].students.push(student);
-        classes[classIndex].stats[student.geschlecht]++;
-    });
-    
-    return {
-        timestamp: new Date().toISOString(),
-        numberOfClasses: numberOfClasses,
-        totalStudents: students.length,
-        assignments: classes,
-        conflicts: []
-    };
 }
 
 // Display assignment results
 function displayAssignmentResults(data) {
+    console.log('🖼️ Zeige Assignment-Ergebnisse an:', data);
+    
     const resultsContainer = document.getElementById('assignmentResults');
     const classesDisplay = document.getElementById('classesDisplay');
     const conflictsDisplay = document.getElementById('conflictsDisplay');
     
     // Show results container
     resultsContainer.style.display = 'block';
+    console.log('👁️ Assignment-Results Container eingeblendet');
     
     // Display classes
     if (data.assignments && data.assignments.length > 0) {
+        console.log(`📚 Rendere ${data.assignments.length} Klassen`);
         classesDisplay.innerHTML = data.assignments.map(classObj => `
             <div class="class-result">
                 <h5>Klasse ${classObj.id}</h5>
@@ -1150,10 +1227,12 @@ function displayAssignmentResults(data) {
                 </div>
             </div>
         `).join('');
+        console.log('✅ Klassen-Display gerendert');
     }
     
     // Display conflicts if any
     if (data.conflicts && data.conflicts.length > 0) {
+        console.log(`⚠️ ${data.conflicts.length} Konflikte gefunden:`, data.conflicts);
         conflictsDisplay.innerHTML = `
             <div class="conflicts-section">
                 <h5>⚠️ Konflikte</h5>
@@ -1163,47 +1242,64 @@ function displayAssignmentResults(data) {
             </div>
         `;
     } else {
+        console.log('✅ Keine Konflikte gefunden');
         conflictsDisplay.innerHTML = '<div class="no-conflicts">✅ Keine Konflikte gefunden</div>';
     }
+    
+    console.log('✅ Assignment-Ergebnisse vollständig angezeigt');
 }
 
-// Reset class assignments
+// Reset class assignments with better error handling
 async function resetClassAssignments() {
-    // Prevent any default browser behavior
-    try {
-        if (event) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-    } catch (e) {
-        // event might not be defined in some contexts
-    }
+    console.log('🔄 Starte Reset der Klassenzuordnungen');
     
     if (!confirm('Möchten Sie wirklich alle Klassenzuordnungen zurücksetzen?')) {
+        console.log('❌ Reset von Benutzer abgebrochen');
         return false;
     }
     
     try {
+        console.log('📡 Sende Reset-Request an Server');
+        
+        const resetBtn = document.getElementById('resetAssignmentsBtn');
+        const originalText = resetBtn.textContent;
+        resetBtn.disabled = true;
+        resetBtn.textContent = 'Wird zurückgesetzt...';
+        console.log('🔒 Reset-Button deaktiviert');
+        
         const response = await fetch(`${API_BASE_URL}/assignments`, {
             method: 'DELETE'
         });
         
+        console.log('📥 Reset Response:', response.status, response.statusText);
+        
         if (response.ok) {
+            console.log('✅ Reset erfolgreich');
             document.getElementById('assignmentResults').style.display = 'none';
             showNotification('Klassenzuordnungen zurückgesetzt!', 'success');
             
-            // If we're on the classes tab, reload the assignments
-            if (document.querySelector('.tab-btn.active').textContent.includes('Klassenzuordnung')) {            loadClassAssignments();
-            }
+            console.log('🧹 Assignment-Results ausgeblendet');
         } else {
-            throw new Error('Fehler beim Zurücksetzen der Zuordnungen');
+            const errorData = await response.json();
+            console.error('❌ Reset-Fehler:', errorData);
+            throw new Error(errorData.error || 'Fehler beim Zurücksetzen der Zuordnungen');
         }
+        
+        resetBtn.disabled = false;
+        resetBtn.textContent = originalText;
+        console.log('🔓 Reset-Button wieder aktiviert');
+        
     } catch (error) {
-        console.error('Fehler beim Zurücksetzen:', error);
+        console.error('💥 Fehler beim Zurücksetzen:', error);
         showNotification('Fehler beim Zurücksetzen: ' + error.message, 'error');
+        
+        const resetBtn = document.getElementById('resetAssignmentsBtn');
+        resetBtn.disabled = false;
+        resetBtn.textContent = 'Zuordnung zurücksetzen';
+        console.log('🔓 Reset-Button nach Fehler wieder aktiviert');
     }
     
-    return false; // Explicitly prevent any form submission
+    return false;
 }
 
 // Export class assignments to JSON

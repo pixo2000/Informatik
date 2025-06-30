@@ -37,3 +37,5 @@ Freund 2(Name)
 
 - prüfen ob zahlen zur klasse passen
 falls kurz nicht klassen ist so wie aktuell reli
+
+buttons beim druck entfernen

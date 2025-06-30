@@ -1,0 +1,125 @@
+{
+  "timestamp": "2025-06-30T09:03:05.746476",
+  "numberOfClasses": 3,
+  "totalStudents": 4,
+  "assignments": [
+    {
+      "id": 1,
+      "name": "Klasse 1",
+      "students": [
+        {
+          "id": 1749210452679,
+          "nachname": "Cielo Nienow",
+          "vorname": "Cedrick.Hansen30",
+          "geschlecht": "männlich",
+          "externerSchueler": false,
+          "rechtzeitigAbgegeben": true,
+          "abgabedatum": null,
+          "zweiteFremdsprache": "Latein",
+          "musischesFach": "Musik",
+          "religioesesFach": "Ethik",
+          "freiesFach": "Erdkunde Bilingual",
+          "freund1": "Katelin.Macejkovic89",
+          "freund2": "Christiana.Macejkovic",
+          "erstelltAm": "2025-06-06T13:47:32.687599",
+          "prioritaet": 491
+        },
+        {
+          "id": 1749210447736,
+          "nachname": "Adalberto Okuneva",
+          "vorname": "Danika53",
+          "geschlecht": "weiblich",
+          "externerSchueler": true,
+          "rechtzeitigAbgegeben": false,
+          "abgabedatum": "2025-02-23",
+          "zweiteFremdsprache": "Latein",
+          "musischesFach": "Musik",
+          "religioesesFach": "Evangelisch",
+          "freiesFach": "Erdkunde Bilingual",
+          "freund1": "Adan_Braun26",
+          "freund2": "Mckenna.Wolff27",
+          "erstelltAm": "2025-06-06T13:47:27.798918",
+          "prioritaet": 391
+        }
+      ],
+      "stats": {
+        "männlich": 1,
+        "weiblich": 1,
+        "subjects": {
+          "Latein": 2,
+          "Musik": 2,
+          "Ethik": 1,
+          "Erdkunde Bilingual": 2,
+          "Evangelisch": 1
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Klasse 2",
+      "students": [
+        {
+          "id": 1749210457968,
+          "nachname": "Janet Herman-Armstrong",
+          "vorname": "Vesta.Roberts57",
+          "geschlecht": "weiblich",
+          "externerSchueler": true,
+          "rechtzeitigAbgegeben": true,
+          "abgabedatum": null,
+          "zweiteFremdsprache": "Spanisch",
+          "musischesFach": "Kunst",
+          "religioesesFach": "Katholisch",
+          "freiesFach": "Erdkunde",
+          "freund1": "Stanford.Von",
+          "freund2": "April17",
+          "erstelltAm": "2025-06-06T13:47:38.268068",
+          "prioritaet": 491
+        }
+      ],
+      "stats": {
+        "männlich": 0,
+        "weiblich": 1,
+        "subjects": {
+          "Spanisch": 1,
+          "Kunst": 1,
+          "Katholisch": 1,
+          "Erdkunde": 1
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "Klasse 3",
+      "students": [
+        {
+          "id": 1749210442062,
+          "nachname": "Felton Greenholt",
+          "vorname": "Henderson.Stracke-Wilderman",
+          "geschlecht": "weiblich",
+          "externerSchueler": true,
+          "rechtzeitigAbgegeben": false,
+          "abgabedatum": "2025-07-25",
+          "zweiteFremdsprache": "Latein",
+          "musischesFach": "Musik",
+          "religioesesFach": "Ethik",
+          "freiesFach": "Erdkunde Bilingual",
+          "freund1": "Margarete.Rosenbaum",
+          "freund2": "Roselyn_Koelpin",
+          "erstelltAm": "2025-06-06T13:47:22.095826",
+          "prioritaet": 391
+        }
+      ],
+      "stats": {
+        "männlich": 0,
+        "weiblich": 1,
+        "subjects": {
+          "Latein": 1,
+          "Musik": 1,
+          "Ethik": 1,
+          "Erdkunde Bilingual": 1
+        }
+      }
+    }
+  ],
+  "success": true
+}

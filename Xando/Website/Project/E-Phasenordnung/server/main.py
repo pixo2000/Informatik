@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
+# Remove flask_cors import since we'll handle CORS manually
 import json
 import os
 import shutil
@@ -9,10 +9,7 @@ import time
 
 app = Flask(__name__)
 
-# Configure CORS with more permissive settings for development
-CORS(app, origins=["http://localhost:*", "http://127.0.0.1:*", "http://10.0.1.239:*"], 
-     methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-     allow_headers=["Content-Type", "Authorization"])
+# Remove CORS configuration - we'll handle it manually
 
 # Data file paths
 DATA_FILE = 'students.json'
@@ -153,17 +150,18 @@ def handle_preflight():
     """Handle CORS preflight requests"""
     if request.method == "OPTIONS":
         response = jsonify()
-        response.headers.add("Access-Control-Allow-Origin", "*")
-        response.headers.add('Access-Control-Allow-Headers', "*")
-        response.headers.add('Access-Control-Allow-Methods', "*")
+        response.headers["Access-Control-Allow-Origin"] = "*"
+        response.headers["Access-Control-Allow-Headers"] = "Content-Type,Authorization,Accept,Origin"
+        response.headers["Access-Control-Allow-Methods"] = "GET,POST,PUT,DELETE,OPTIONS"
+        response.headers["Access-Control-Max-Age"] = "86400"
         return response
 
 @app.after_request
 def after_request(response):
     """Add CORS headers to all responses"""
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
-    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type,Authorization,Accept,Origin"
+    response.headers["Access-Control-Allow-Methods"] = "GET,PUT,POST,DELETE,OPTIONS"
     return response
 
 @app.route('/api/students', methods=['GET'])
@@ -187,7 +185,8 @@ def add_student():
         for field in required_fields:
             if not student_data.get(field):
                 return jsonify({'error': f'Feld {field} ist erforderlich'}), 400
-          # Load existing students
+        
+        # Load existing students
         students = load_students()
         
         # Check for duplicate names
@@ -317,191 +316,101 @@ def get_stats():
 def create_class_assignments():
     """Create automatic class assignments"""
     try:
+        print(f"📥 Assignment Request empfangen von: {request.headers.get('Origin', 'Unknown')}")
+        print(f"🔍 Request Method: {request.method}")
+        print(f"🔍 Content-Type: {request.headers.get('Content-Type', 'Not set')}")
+        print(f"🔍 Request Headers: {dict(request.headers)}")
+        
+        # Check if request has JSON data
+        if not request.is_json:
+            print("❌ Request ist nicht JSON")
+            return jsonify({'error': 'Content-Type muss application/json sein'}), 400
+        
         data = request.json
+        if data is None:
+            print("❌ Keine JSON-Daten empfangen")
+            return jsonify({'error': 'Keine JSON-Daten empfangen'}), 400
+        
+        print(f"📋 Assignment Request Daten: {data}")
+        
         number_of_classes = data.get('numberOfClasses', 3)
+        print(f"🎯 Anzahl Klassen: {number_of_classes}")
         
         if number_of_classes < 1 or number_of_classes > 10:
+            print(f"❌ Ungültige Anzahl Klassen: {number_of_classes}")
             return jsonify({'error': 'Anzahl der Klassen muss zwischen 1 und 10 liegen'}), 400
         
         students = load_students()
+        print(f"👥 Geladene Schüler: {len(students)}")
         
         if len(students) < number_of_classes:
+            print(f"❌ Nicht genug Schüler: {len(students)} < {number_of_classes}")
             return jsonify({'error': 'Es müssen mindestens so viele Schüler wie Klassen vorhanden sein'}), 400
         
-        # Create assignments using the same algorithm as frontend
+        # Create assignments using algorithm
+        print(f"🔄 Erstelle Assignments für {number_of_classes} Klassen...")
         assignments = create_assignments_algorithm(students, number_of_classes)
-          # Save assignments to file
+        print(f"✅ {len(assignments)} Klassen erstellt")
+        
+        # Save assignments to file
         assignment_data = {
             'timestamp': datetime.now().isoformat(),
             'numberOfClasses': number_of_classes,
             'totalStudents': len(students),
-            'assignments': assignments
+            'assignments': assignments,
+            'success': True
         }
         
-        save_assignments(assignment_data)
-        
-        return jsonify(assignment_data), 201
-        
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-@app.route('/api/assignments', methods=['GET'])
-def get_latest_assignments():
-    """Get the latest class assignments"""
-    try:
-        assignments = load_assignments()
-        if assignments:
-            return jsonify(assignments)
-        else:
-            return jsonify({'error': 'Keine Zuordnungen gefunden'}), 404
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-@app.route('/api/assignments', methods=['PUT'])
-def update_class_assignments():
-    """Update class assignments manually"""
-    try:
-        assignment_data = request.json
-        
-        # Validate that all students are assigned
-        students = load_students()
-        student_ids = {s['id'] for s in students}
-        assigned_ids = set()
-        
-        for class_obj in assignment_data.get('assignments', []):
-            for student in class_obj.get('students', []):
-                assigned_ids.add(student.get('id'))
-        
-        # Check if all students are assigned
-        if student_ids != assigned_ids:
-            missing = student_ids - assigned_ids
-            extra = assigned_ids - student_ids
-            error_msg = ""
-            if missing:
-                error_msg += f"Fehlende Schüler-IDs: {missing}. "
-            if extra:
-                error_msg += f"Unbekannte Schüler-IDs: {extra}. "
-            return jsonify({'error': error_msg}), 400
-        
-        # Update timestamp and save
-        assignment_data['timestamp'] = assignment_data.get('timestamp', datetime.now().isoformat())
-        assignment_data['lastModified'] = datetime.now().isoformat()
-        assignment_data['manuallyEdited'] = True
-        
+        print(f"💾 Speichere Assignment-Daten...")
         if save_assignments(assignment_data):
-            return jsonify(assignment_data)
+            print(f"✅ Assignment erfolgreich gespeichert")
+            response = jsonify(assignment_data)
+            response.status_code = 201
+            print(f"📤 Sende Response mit Status 201")
+            return response
         else:
-            return jsonify({'error': 'Fehler beim Speichern'}), 500
-            
+            print("❌ Fehler beim Speichern der Assignments")
+            return jsonify({'error': 'Fehler beim Speichern der Zuordnungen'}), 500
+        
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        print(f"💥 Exception in create_class_assignments: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return jsonify({'error': f'Interner Fehler: {str(e)}'}), 500
 
 @app.route('/api/assignments', methods=['DELETE'])
 def delete_assignments():
     """Delete all class assignments"""
     try:
+        print("🗑️ Assignment DELETE Request empfangen")
+        
         if os.path.exists(ASSIGNMENTS_FILE):
+            print(f"📁 Lösche Datei: {ASSIGNMENTS_FILE}")
             os.remove(ASSIGNMENTS_FILE)
-            print("🗑️ Klassenzuordnungen gelöscht")
-        return jsonify({'message': 'Klassenzuordnungen erfolgreich gelöscht'}), 200
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-@app.route('/api/assignments/student/<int:student_id>/move', methods=['POST'])
-def move_student_to_class(student_id):
-    """Move a student from one class to another"""
-    try:
-        data = request.json
-        target_class_id = data.get('targetClassId')
-        
-        if target_class_id is None:
-            return jsonify({'error': 'targetClassId ist erforderlich'}), 400
-        
-        assignments = load_assignments()
-        if not assignments:
-            return jsonify({'error': 'Keine Zuordnungen gefunden'}), 404
-        
-        # Find and remove student from current class
-        student_found = False
-        student_data = None
-        
-        for class_obj in assignments['assignments']:
-            students_to_keep = []
-            for student in class_obj['students']:
-                if student['id'] == student_id:
-                    student_found = True
-                    student_data = student
-                else:
-                    students_to_keep.append(student)
-            class_obj['students'] = students_to_keep
-        
-        if not student_found:
-            return jsonify({'error': 'Schüler nicht gefunden'}), 404
-        
-        # Find target class and add student
-        target_class_found = False
-        for class_obj in assignments['assignments']:
-            if class_obj['id'] == target_class_id:
-                class_obj['students'].append(student_data)
-                target_class_found = True
-                break
-        
-        if not target_class_found:
-            return jsonify({'error': 'Zielklasse nicht gefunden'}), 404
-        
-        # Update stats for all classes
-        for class_obj in assignments['assignments']:
-            update_class_stats(class_obj)
-        
-        # Mark as manually edited and save
-        assignments['lastModified'] = datetime.now().isoformat()
-        assignments['manuallyEdited'] = True
-        
-        if save_assignments(assignments):
-            return jsonify(assignments)
+            print("✅ Assignments-Datei gelöscht")
         else:
-            return jsonify({'error': 'Fehler beim Speichern'}), 500
-            
+            print("⚠️ Assignments-Datei existiert nicht")
+        
+        response_data = {'message': 'Klassenzuordnungen erfolgreich gelöscht'}
+        print(f"📤 Sende Success Response: {response_data}")
+        return jsonify(response_data), 200
+        
     except Exception as e:
+        print(f"💥 Fehler beim Löschen der Assignments: {str(e)}")
         return jsonify({'error': str(e)}), 500
-
-def update_class_stats(class_obj):
-    """Update statistics for a class"""
-    class_obj['stats'] = {
-        'männlich': 0,
-        'weiblich': 0,
-        'subjects': {}
-    }
-    
-    for student in class_obj['students']:
-        # Update gender count
-        gender = student.get('geschlecht', 'Unbekannt')
-        if gender in class_obj['stats']:
-            class_obj['stats'][gender] += 1
-        
-        # Update subject count
-        subjects = [
-            student.get('zweiteFremdsprache'),
-            student.get('musischesFach'),
-            student.get('religioesesFach'),
-            student.get('freiesFach')
-        ]
-        
-        for subject in subjects:
-            if subject:
-                if subject not in class_obj['stats']['subjects']:
-                    class_obj['stats']['subjects'][subject] = 0
-                class_obj['stats']['subjects'][subject] += 1
 
 def create_assignments_algorithm(students, number_of_classes):
     """Server-side implementation of class assignment algorithm"""
+    print(f"🧮 Starte Assignment-Algorithmus mit {len(students)} Schülern für {number_of_classes} Klassen")
+    
     # Sort students by priority
     sorted_students = sorted(students, key=lambda x: x.get('prioritaet', 0), reverse=True)
+    print(f"📊 Schüler nach Priorität sortiert: {[f'{s.get('nachname', '?')}, {s.get('vorname', '?')} (P:{s.get('prioritaet', 0)})' for s in sorted_students[:5]]}...")
     
     # Initialize classes
     classes = []
     for i in range(number_of_classes):
-        classes.append({
+        class_obj = {
             'id': i + 1,
             'name': f'Klasse {i + 1}',
             'students': [],
@@ -510,10 +419,14 @@ def create_assignments_algorithm(students, number_of_classes):
                 'weiblich': 0,
                 'subjects': {}
             }
-        })
+        }
+        classes.append(class_obj)
+        print(f"📚 Klasse {i + 1} initialisiert")
     
     # Simple round-robin assignment with gender balance consideration
     for i, student in enumerate(sorted_students):
+        print(f"👤 Verarbeite Schüler {i+1}/{len(sorted_students)}: {student.get('nachname', '?')}, {student.get('vorname', '?')}")
+        
         # Find class with best gender balance
         best_class_idx = 0
         best_balance = float('inf')
@@ -548,6 +461,7 @@ def create_assignments_algorithm(students, number_of_classes):
         # Assign student to best class
         classes[best_class_idx]['students'].append(student)
         classes[best_class_idx]['stats'][student['geschlecht']] += 1
+        print(f"➡️ Schüler zu Klasse {best_class_idx + 1} zugeordnet (Balance-Score: {best_balance:.3f})")
         
         # Update subject stats
         subjects = [student.get('zweiteFremdsprache'), student.get('musischesFach'), 
@@ -558,101 +472,14 @@ def create_assignments_algorithm(students, number_of_classes):
                     classes[best_class_idx]['stats']['subjects'][subject] = 0
                 classes[best_class_idx]['stats']['subjects'][subject] += 1
     
+    # Print final class statistics
+    for i, class_obj in enumerate(classes):
+        print(f"📊 Klasse {i+1}: {len(class_obj['students'])} Schüler, "
+              f"♂️{class_obj['stats']['männlich']} ♀️{class_obj['stats']['weiblich']}")
+    
+    print(f"✅ Assignment-Algorithmus abgeschlossen")
     return classes
-
-def calculate_priority(student_data):
-    """Calculate student priority based on fields"""
-    priority = 1
-    
-    # Rechtzeitig abgegeben hat höchste Priorität
-    if student_data.get('rechtzeitigAbgegeben', False):
-        priority += 100
-    
-    # Andere Felder haben abnehmende Priorität
-    field_priorities = {
-        'zweiteFremdsprache': 90,
-        'musischesFach': 80,
-        'religioesesFach': 70,
-        'freiesFach': 60,
-        'freund1': 50,
-        'freund2': 40
-    }
-    
-    for field, points in field_priorities.items():
-        if student_data.get(field) and str(student_data[field]).strip():
-            priority += points
-    
-    return priority
-
-@app.route('/api/health', methods=['GET'])
-def health_check():
-    """Health check endpoint"""
-    try:
-        # Check if data files are accessible
-        students_accessible = True
-        assignments_accessible = True
-        
-        try:
-            load_students()
-        except Exception:
-            students_accessible = False
-            
-        try:
-            load_assignments()
-        except Exception:
-            assignments_accessible = False
-        
-        return jsonify({
-            'status': 'healthy',
-            'timestamp': datetime.now().isoformat(),
-            'version': '1.0.0',
-            'data_files': {
-                'students': students_accessible,
-                'assignments': assignments_accessible
-            },
-            'cors_enabled': True
-        })
-    except Exception as e:
-        return jsonify({
-            'status': 'unhealthy',
-            'error': str(e),
-            'timestamp': datetime.now().isoformat()
-        }), 500
-
-@app.errorhandler(404)
-def not_found(error):
-    return jsonify({'error': 'Endpoint nicht gefunden'}), 404
-
-@app.errorhandler(500)
-def internal_error(error):
-    return jsonify({'error': 'Interner Server-Fehler'}), 500
 
 if __name__ == '__main__':
     print("🚀 E-Phasen API Server gestartet")
-    print("📊 Endpunkte:")
-    print("   GET    /api/students           - Alle Schüler abrufen")
-    print("   POST   /api/students           - Neuen Schüler hinzufügen")
-    print("   PUT    /api/students/<id>      - Schüler aktualisieren")
-    print("   DELETE /api/students/<id>      - Schüler löschen")
-    print("   GET    /api/students/stats     - Statistiken abrufen")
-    print("   POST   /api/assignments        - Klassenzuordnung erstellen")
-    print("   GET    /api/assignments        - Letzte Zuordnung abrufen")
-    print("   PUT    /api/assignments        - Klassenzuordnung manuell bearbeiten")
-    print("   DELETE /api/assignments        - Klassenzuordnungen löschen")
-    print("   POST   /api/assignments/student/<id>/move - Schüler zwischen Klassen verschieben")
-    print("   GET    /api/health             - Health Check")
-    print()
-    print("🌐 Server läuft auf:")
-    print("   http://localhost:5000")
-    print("   http://127.0.0.1:5000")
-    print("   http://0.0.0.0:5000")
-    print("📝 Daten werden gespeichert in: students.json, assignments.json")
-    print("💾 Automatische Backups in: backups/ (alle 5 Minuten)")
-    print("🔧 CORS aktiviert für lokale Entwicklung")
-    print()
-    
-    try:
-        app.run(debug=True, host='0.0.0.0', port=5000)
-    except Exception as e:
-        print(f"❌ Fehler beim Starten des Servers: {e}")
-        print("💡 Tipp: Prüfen Sie, ob Port 5000 bereits verwendet wird")
+    app.run(debug=True, host='0.0.0.0', port=5000)
