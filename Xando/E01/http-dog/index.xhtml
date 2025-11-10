@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>HTTP Status Dogs</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>HTTP Status Dogs 🐕</h1>
+        <p class="subtitle">Enter an HTTP status code to see the corresponding dog!</p>
+        
+        <div class="input-section">
+            <label for="statusCode">HTTP Status Code:</label>
+            <input type="text" id="statusCode" placeholder="e.g., 200, 404, 500" />
+            <button id="showDog" onclick="showDog()">Show Dog</button>
+        </div>
+        
+        <div id="result" class="result-section">
+            <!-- Dog image will be displayed here -->
+        </div>
+        
+        <div class="common-codes">
+            <h2>Common HTTP Status Codes:</h2>
+            <div class="code-grid">
+                <button onclick="setStatusCode('200')" class="code-button success">200 - OK</button>
+                <button onclick="setStatusCode('201')" class="code-button success">201 - Created</button>
+                <button onclick="setStatusCode('204')" class="code-button success">204 - No Content</button>
+                <button onclick="setStatusCode('301')" class="code-button redirect">301 - Moved Permanently</button>
+                <button onclick="setStatusCode('302')" class="code-button redirect">302 - Found</button>
+                <button onclick="setStatusCode('304')" class="code-button redirect">304 - Not Modified</button>
+                <button onclick="setStatusCode('400')" class="code-button client-error">400 - Bad Request</button>
+                <button onclick="setStatusCode('401')" class="code-button client-error">401 - Unauthorized</button>
+                <button onclick="setStatusCode('403')" class="code-button client-error">403 - Forbidden</button>
+                <button onclick="setStatusCode('404')" class="code-button client-error">404 - Not Found</button>
+                <button onclick="setStatusCode('418')" class="code-button client-error">418 - I'm a teapot</button>
+                <button onclick="setStatusCode('429')" class="code-button client-error">429 - Too Many Requests</button>
+                <button onclick="setStatusCode('500')" class="code-button server-error">500 - Internal Server Error</button>
+                <button onclick="setStatusCode('502')" class="code-button server-error">502 - Bad Gateway</button>
+                <button onclick="setStatusCode('503')" class="code-button server-error">503 - Service Unavailable</button>
+                <button onclick="setStatusCode('504')" class="code-button server-error">504 - Gateway Timeout</button>
+            </div>
+        </div>
+        
+        <div class="info">
+            <p>Images from <a href="https://http.dog" target="_blank">http.dog</a></p>
+        </div>
+    </div>
+</body>
+</html>
